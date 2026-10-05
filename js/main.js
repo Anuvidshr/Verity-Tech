@@ -226,7 +226,7 @@ function initContactForm() {
         <strong>Enquiry Received!</strong> Thank you, <strong>${name}</strong>. A digital strategist from Verity Tech will review your requirements for <em>${businessName || 'your business'}</em> and reach out within 24 hours.
         <div style="margin-top: 0.6rem;">
           <a href="https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi Verity Tech, I just submitted an inquiry for ${businessName || name} regarding ${service}. My budget is ${budget}.`)}" target="_blank" style="color: #63E6BE; text-decoration: underline; font-weight: 600;">
-            Want a faster response? Click here to chat with us on WhatsApp (+91 89828 20353) →
+            Want a faster response? Click here to chat with us on WhatsApp →
           </a>
         </div>
       `;
