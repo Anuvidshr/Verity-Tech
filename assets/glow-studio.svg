@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <defs>
+    <linearGradient id="gsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#190B19"/>
+      <stop offset="100%" stop-color="#080F1E"/>
+    </linearGradient>
+    <linearGradient id="gsAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E879F9"/>
+      <stop offset="100%" stop-color="#63E6BE"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#gsBg)"/>
+  <rect x="20" y="20" width="560" height="360" rx="16" fill="#120E1E" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+  
+  <!-- Mini Header -->
+  <rect x="40" y="45" width="115" height="14" rx="4" fill="#F8FAFC" opacity="0.9"/>
+  <rect x="360" y="48" width="50" height="8" rx="4" fill="#94A3B8" opacity="0.5"/>
+  <rect x="425" y="48" width="50" height="8" rx="4" fill="#94A3B8" opacity="0.5"/>
+  <rect x="490" y="42" width="70" height="20" rx="10" fill="url(#gsAccent)"/>
+  <text x="502" y="56" font-family="'Space Grotesk', sans-serif" font-size="9" font-weight="700" fill="#050B14">BOOKING</text>
+
+  <!-- Hero Banner -->
+  <rect x="40" y="85" width="520" height="150" rx="12" fill="#1A1226" stroke="rgba(232,121,249,0.25)" stroke-width="1"/>
+  
+  <!-- Wellness Lotus Silhouette -->
+  <path d="M480 180 C460 170 455 145 480 135 C505 145 500 170 480 180 Z" fill="rgba(232,121,249,0.2)" stroke="#E879F9" stroke-width="1.5"/>
+  <path d="M480 180 C445 180 435 155 460 145 C475 160 480 180 480 180 Z" fill="rgba(99,230,190,0.15)" stroke="#63E6BE" stroke-width="1.5"/>
+  <path d="M480 180 C515 180 525 155 500 145 C485 160 480 180 480 180 Z" fill="rgba(99,230,190,0.15)" stroke="#63E6BE" stroke-width="1.5"/>
+
+  <!-- Content typography -->
+  <rect x="65" y="110" width="110" height="12" rx="6" fill="#E879F9" opacity="0.9"/>
+  <text x="73" y="119" font-family="sans-serif" font-size="8" font-weight="700" fill="#050B14">BEAUTY &amp; WELLNESS</text>
+  <text x="65" y="152" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="700" fill="#F8FAFC">Glow Wellness &amp; Salon</text>
+  <text x="65" y="174" font-family="sans-serif" font-size="11" fill="#94A3B8">Luxury skin aesthetics, hair therapy, and personalized organic spa.</text>
+  
+  <rect x="65" y="195" width="120" height="26" rx="13" fill="#E879F9"/>
+  <text x="78" y="212" font-family="sans-serif" font-size="10" font-weight="700" fill="#050B14">Book Appointment</text>
+  <rect x="195" y="195" width="110" height="26" rx="13" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)"/>
+  <text x="207" y="212" font-family="sans-serif" font-size="10" fill="#F8FAFC">Instagram Feed</text>
+
+  <!-- Feature Cards Row -->
+  <rect x="40" y="255" width="160" height="100" rx="8" fill="#130D20" stroke="rgba(255,255,255,0.06)"/>
+  <text x="55" y="280" font-family="sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">24/7 Booking</text>
+  <text x="55" y="298" font-family="sans-serif" font-size="9" fill="#94A3B8">Self-service slot selection with live availability.</text>
+  <rect x="55" y="322" width="75" height="16" rx="4" fill="rgba(232,121,249,0.15)"/>
+  <text x="63" y="333" font-family="sans-serif" font-size="8" font-weight="700" fill="#E879F9">Zero Calls</text>
+
+  <rect x="220" y="255" width="160" height="100" rx="8" fill="#130D20" stroke="rgba(255,255,255,0.06)"/>
+  <text x="235" y="280" font-family="sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">WhatsApp Ping</text>
+  <text x="235" y="298" font-family="sans-serif" font-size="9" fill="#94A3B8">Automatic confirmation and salon GPS pin.</text>
+  <rect x="235" y="322" width="75" height="16" rx="4" fill="rgba(37,211,102,0.15)"/>
+  <text x="243" y="333" font-family="sans-serif" font-size="8" font-weight="700" fill="#25D366">Auto-Alert</text>
+
+  <rect x="400" y="255" width="160" height="100" rx="8" fill="#130D20" stroke="rgba(255,255,255,0.06)"/>
+  <text x="415" y="280" font-family="sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">Treatment Menu</text>
+  <text x="415" y="298" font-family="sans-serif" font-size="9" fill="#94A3B8">Categorized pricing, time estimates &amp; add-ons.</text>
+  <rect x="415" y="322" width="70" height="16" rx="4" fill="rgba(99,230,190,0.15)"/>
+  <text x="423" y="333" font-family="sans-serif" font-size="8" font-weight="700" fill="#63E6BE">Transparent</text>
+</svg>

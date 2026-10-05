@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Verity Tech | Digital Experiences Built for Growing Businesses</title>
+  <meta name="title" content="Verity Tech | Digital Experiences Built for Growing Businesses">
+  <meta name="description"
+    content="Verity Tech is a modern web development and digital services studio working globally. We build custom websites, booking systems, digital menus, and practical digital workflows for cafés, restaurants, local businesses, and growing brands.">
+  <meta name="keywords"
+    content="web development, digital studio, restaurant websites, café digital menu, business websites, booking systems, Verity Tech">
+  <meta name="author" content="Verity Tech">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://veritytech.in/">
+  <meta property="og:title" content="Verity Tech | Digital Experiences Built for Growing Businesses">
+  <meta property="og:description"
+    content="We build modern websites that make businesses look established. Digital Studio • Web Development • Global.">
+  <meta property="og:image" content="assets/maison-cafe.svg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Verity Tech | Web Development & Digital Services">
+  <meta property="twitter:description"
+    content="Modern websites, booking solutions and practical digital services for cafés, restaurants, local businesses and professionals.">
+  <meta property="twitter:image" content="assets/maison-cafe.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts: Fraunces & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@400..800&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Instant Theme Initializer (Prevents Flash, Defaults to Light) -->
+  <script>
+    (function () {
+      try {
+        const savedTheme = localStorage.getItem('vt-theme');
+        if (savedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       Sticky Navigation Bar
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Verity Tech Home">
+        <div class="logo-mark">
+          <svg width="20" height="20" viewBox="0 0 64 64" fill="none">
+            <path d="M16 18L32 46L48 18H39L32 32L25 18H16Z" fill="#63E6BE" />
+            <circle cx="32" cy="18" r="4" fill="#75A7FF" />
+          </svg>
+        </div>
+        <span><span class="logo-nexa">Verity</span><span class="logo-web">Tech</span></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#why" class="nav-link">Why Us</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav CTA & Theme Toggle -->
+      <div class="nav-cta">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Light / Dark Theme"
+          title="Toggle theme">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm">Start a Project</a>
+
+        <button class="mobile-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Overlay -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Menu">
+    <div>
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2.5rem;">
+        <div class="brand-logo">
+          <div class="logo-mark">
+            <svg width="20" height="20" viewBox="0 0 64 64" fill="none">
+              <path d="M16 18L32 46L48 18H39L32 32L25 18H16Z" fill="#63E6BE" />
+            </svg>
+          </div>
+          <span>Verity<span class="logo-web">Tech</span></span>
+        </div>
+
+        <!-- Mobile Theme Toggle -->
+        <button class="theme-toggle-btn" id="mobileThemeToggleBtn" aria-label="Toggle Light / Dark Theme"
+          title="Toggle theme">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav-links">
+        <a href="#hero" class="mobile-nav-link">Home <span>→</span></a>
+        <a href="#services" class="mobile-nav-link">Services <span>→</span></a>
+        <a href="#testimonials" class="mobile-nav-link">Testimonials <span>→</span></a>
+        <a href="#why" class="mobile-nav-link">Why Us <span>→</span></a>
+        <a href="#process" class="mobile-nav-link">Process <span>→</span></a>
+        <a href="#about" class="mobile-nav-link">About <span>→</span></a>
+        <a href="#contact" class="mobile-nav-link">Contact <span>→</span></a>
+      </nav>
+    </div>
+    <div>
+      <a href="#contact" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Start a Project</a>
+      <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center;">
+        hello@veritytech.in • Global Digital Studio
+      </p>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero-section section" id="hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid">
+        <!-- Hero Content -->
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span>DIGITAL STUDIO • WEB DEVELOPMENT • GLOBAL</span>
+          </div>
+          <h1 class="hero-title">
+            We build digital experiences that make businesses look <span class="highlight">established.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Modern websites, booking solutions and practical digital services for cafés, restaurants, local businesses,
+            professionals and growing brands.
+          </p>
+          <div class="hero-actions">
+            <a href="#testimonials" class="btn btn-secondary">Client Testimonials</a>
+            <a href="#contact" class="btn btn-primary">Start a Project</a>
+          </div>
+          <div class="hero-location-badge">
+            <span class="pin-dot"></span>
+            <span>Digital Studio • Web Development • Working with Clients Globally</span>
+          </div>
+        </div>
+
+        <!-- Hero Visual Mockup -->
+        <div class="hero-visual-wrap">
+          <div class="mockup-browser">
+            <div class="mockup-header">
+              <div class="mockup-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="mockup-address-bar">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <span>veritytech.in/showcase/artisanal-bistro</span>
+              </div>
+            </div>
+
+            <div class="mockup-body">
+              <!-- Mini Navigation -->
+              <div class="mini-site-nav">
+                <div class="mini-logo">The Foundry Bistro</div>
+                <div class="mini-pill">Book a Table</div>
+              </div>
+
+              <!-- Mini Hero Banner -->
+              <div class="mini-hero">
+                <div class="mini-badge">BISTRO &amp; WOODFIRED GRILL</div>
+                <div class="mini-title">Handcrafted dining for modern food lovers</div>
+                <p class="mini-desc">Seasonal menus, artisan sourdough pizzas and weekend live kitchen events.</p>
+                <div class="mini-actions">
+                  <span class="mini-btn mini-btn-accent">Reserve Table</span>
+                  <span class="mini-btn mini-btn-ghost">View QR Menu</span>
+                </div>
+              </div>
+
+              <!-- Mini Service / Feature Row -->
+              <div class="mini-cards-row">
+                <div class="mini-feature-card">
+                  <div class="feat-icon">🍷</div>
+                  <div class="feat-title">Chef Specials</div>
+                  <div class="feat-sub">Weekly Tasting</div>
+                </div>
+                <div class="mini-feature-card">
+                  <div class="feat-icon">⭐</div>
+                  <div class="feat-title">4.9 Star Rating</div>
+                  <div class="feat-sub">500+ Verified</div>
+                </div>
+                <div class="mini-feature-card">
+                  <div class="feat-icon">💬</div>
+                  <div class="feat-title">WhatsApp Order</div>
+                  <div class="feat-sub">Instant Ping</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Metric Badges: Stacked in groups of two below the mockup -->
+          <div class="hero-badges-grid">
+            <div class="hero-feature-badge">
+              <div class="badge-icon badge-icon-mint">📈</div>
+              <div class="badge-info">
+                <div class="badge-title">+38% Enquiries</div>
+                <div class="badge-sub">Average conversion lift</div>
+              </div>
+            </div>
+
+            <div class="hero-feature-badge">
+              <div class="badge-icon badge-icon-blue">📅</div>
+              <div class="badge-info">
+                <div class="badge-title">Online Booking</div>
+                <div class="badge-sub">24/7 Automated capture</div>
+              </div>
+            </div>
+
+            <div class="hero-feature-badge">
+              <div class="badge-icon badge-icon-wa">💬</div>
+              <div class="badge-info">
+                <div class="badge-title">WhatsApp Connected</div>
+                <div class="badge-sub">Zero-friction leads</div>
+              </div>
+            </div>
+
+            <div class="hero-feature-badge">
+              <div class="badge-icon badge-icon-mobile">📱</div>
+              <div class="badge-info">
+                <div class="badge-title">Mobile Optimized</div>
+                <div class="badge-sub">Ultra-fast loading</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Trust / Credibility Strip
+         ========================================================================== -->
+    <section class="trust-strip">
+      <div class="container trust-content">
+        <div class="trust-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#63E6BE" stroke-width="2.2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span>Built for businesses that want to grow online:</span>
+        </div>
+        <div class="trust-categories">
+          <span class="trust-badge">☕ Cafés</span>
+          <span class="trust-badge">🍽 Restaurants</span>
+          <span class="trust-badge">🏢 Local Businesses</span>
+          <span class="trust-badge">💼 Professionals</span>
+          <span class="trust-badge">🚀 Startups</span>
+          <span class="trust-badge">🎨 Creators</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Services Section (12 Services)
+         ========================================================================== -->
+    <section class="services-section section" id="services">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label">WHAT WE DO</div>
+          <h2 class="section-heading">Everything you need to build a stronger online presence.</h2>
+          <p class="section-subheading">
+            We combine web development with practical digital services so businesses can attract customers, receive
+            enquiries and operate more efficiently online.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- 01 Business Websites -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">🌐</div>
+                <span class="service-num">01</span>
+              </div>
+              <h3 class="service-title">Business Websites</h3>
+              <p class="service-desc">
+                Professional websites for local businesses, cafés, restaurants, professionals and growing brands that
+                establish authority and trust.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-tag">Core Foundation</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </div>
+
+          <!-- 02 Restaurant & Café Websites -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">🍽</div>
+                <span class="service-num">02</span>
+              </div>
+              <h3 class="service-title">Restaurant &amp; Café Websites</h3>
+              <p class="service-desc">
+                Menus, galleries, locations, reservations, reviews, WhatsApp integration and direct customer enquiry
+                features without aggregator fees.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-tag">Hospitality</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </div>
+
+          <!-- 03 Landing Pages -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">🎯</div>
+                <span class="service-num">03</span>
+              </div>
+              <h3 class="service-title">Landing Pages</h3>
+              <p class="service-desc">
+                High-converting landing pages tailored for products, services, campaigns, events, promotions, and
+                targeted ad conversions.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-tag">Conversion</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </div>
+
+          <!-- 04 Booking & Appointment Systems -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">📅</div>
+                <span class="service-num">04</span>
+              </div>
+              <h3 class="service-title">Booking &amp; Appointment Systems</h3>
+              <p class="service-desc">
+                Online appointment, reservation and enquiry systems that make it easy for customers to take action and
+                book slots directly.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-tag">Automation</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </div>
+
+          <!-- 05 Digital & QR Menus -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">📱</div>
+                <span class="service-num">05</span>
+              </div>
+              <h3 class="service-title">Digital &amp; QR Menus</h3>
+              <p class="service-desc">
+                Mobile-friendly digital menus that customers can access instantly through QR codes without printing
+                costly paper menus.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-tag">Contactless</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </div>
+
+          <!-- 06 Online Forms & Applications -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">📋</div>
+                <span class="service-num">06</span>
+              </div>
+              <h3 class="service-title">Online Forms &amp; Applications</h3>
+              <p class="service-desc">
+                Digital forms for enquiries, registrations, candidate applications, custom surveys, and business client
+                onboarding workflows.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-tag">Operations</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </div>
+
+          <!-- 07 E-Ticket Booking Assistance -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">🎫</div>
+                <span class="service-num">07</span>
+              </div>
+              <h3 class="service-title">E-Ticket Booking Assistance</h3>
+              <p class="service-desc">
+                Customer-side digital assistance and guided setup with online ticket booking and e-ticket processes
+                through official platforms.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-tag">Assistance</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </div>
+
+          <!-- 08 WhatsApp Integration -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">💬</div>
+                <span class="service-num">08</span>
+              </div>
+              <h3 class="service-title">WhatsApp Integration</h3>
+              <p class="service-desc">
+                Connect websites with WhatsApp for direct enquiries, instant bookings, customer communication, and
+                automated lead routing.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-tag">Direct Comms</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </div>
+
+          <!-- 09 Domain & Business Email -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">✉️</div>
+                <span class="service-num">09</span>
+              </div>
+              <h3 class="service-title">Domain &amp; Business Email</h3>
+              <p class="service-desc">
+                Professional custom domain setup (yourname.in / .com) and business email configuration (Google Workspace
+                / Zoho Mail).
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-tag">Credibility</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </div>
+
+          <!-- 10 Google Business Setup Assistance -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">📍</div>
+                <span class="service-num">10</span>
+              </div>
+              <h3 class="service-title">Google Business Setup Assistance</h3>
+              <p class="service-desc">
+                Help local businesses establish and optimize their Google Business Profile, Google Maps pins, and local
+                search visibility.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-tag">Local SEO</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </div>
+
+          <!-- 11 Website Maintenance -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">🛠️</div>
+                <span class="service-num">11</span>
+              </div>
+              <h3 class="service-title">Website Maintenance</h3>
+              <p class="service-desc">
+                Content updates, performance optimization, security fixes, uptime monitoring and ongoing website support
+                when you need it.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-tag">Ongoing Care</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </div>
+
+          <!-- 12 Website Redesign -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">✨</div>
+                <span class="service-num">12</span>
+              </div>
+              <h3 class="service-title">Website Redesign</h3>
+              <p class="service-desc">
+                Modernize outdated, slow websites and overhaul their mobile experience, brand design, and customer
+                conversion flow.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-tag">Transformation</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Client Testimonials (Cafés & Restaurants)
+         ========================================================================== -->
+    <section class="testimonials-section section" id="testimonials">
+      <div id="work" class="section-anchor-shim" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label">CLIENT REVIEWS</div>
+          <h2 class="section-heading">Trusted by cafés &amp; restaurants that value real results.</h2>
+          <p class="section-subheading">
+            Independent café owners and restaurateurs share how our websites, digital menus, and reservation workflows
+            helped grow their business.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 01: The Copper Kettle Café & Roastery -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-top">
+              <div class="star-rating" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="establishment-tag tag-cafe">☕ Café &amp; Roastery</span>
+            </div>
+
+            <p class="testimonial-body">
+              “Before working with Verity Tech, we were constantly reprinting paper menus whenever our seasonal roast
+              selection changed. They built us a clean, fast QR digital menu connected directly to our WhatsApp for
+              takeaway orders. Our weekend table turnover improved noticeably and printing expenses dropped to zero.”
+            </p>
+
+            <div class="testimonial-highlight">
+              <span class="highlight-check">✓</span>
+              <span>Zero menu reprint costs • Instant WhatsApp takeaway orders</span>
+            </div>
+
+            <div class="testimonial-author-row">
+              <div class="author-avatar avatar-amber">KO</div>
+              <div class="author-meta">
+                <div class="author-name">Kabir Oberoi</div>
+                <div class="author-role">Founder &amp; Head Roaster</div>
+                <div class="author-company">The Copper Kettle Café &amp; Roastery • Mumbai</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 02: Olive & Basil Trattoria -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-top">
+              <div class="star-rating" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="establishment-tag tag-restro">🍽 Woodfired Trattoria</span>
+            </div>
+
+            <p class="testimonial-body">
+              “We were losing nearly 25% in commissions to delivery and dining apps just to secure reservations. Verity
+              Tech engineered an independent website for Olive &amp; Basil with a seamless direct table reservation
+              workflow. Over 60% of our weekend guests now book directly without middleman fees.”
+            </p>
+
+            <div class="testimonial-highlight">
+              <span class="highlight-check">✓</span>
+              <span>60%+ direct reservations • Cut 25% aggregator commission</span>
+            </div>
+
+            <div class="testimonial-author-row">
+              <div class="author-avatar avatar-mint">AD</div>
+              <div class="author-meta">
+                <div class="author-name">Ananya Deshmukh</div>
+                <div class="author-role">Owner &amp; Executive Chef</div>
+                <div class="author-company">Olive &amp; Basil Trattoria • Bengaluru</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 03: Spice Route Coastal Bistro -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-top">
+              <div class="star-rating" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="establishment-tag tag-bistro">🍷 Coastal Bistro &amp; Bar</span>
+            </div>
+
+            <p class="testimonial-body">
+              “Most web agencies deliver heavy templates that crawl on mobile phones with spotty seaside connectivity.
+              Verity Tech delivered a clean, dark-mode site that opens in under a second. Tourists discover our Google
+              Maps pin, view our daily seafood specials, and reserve a table in one tap.”
+            </p>
+
+            <div class="testimonial-highlight">
+              <span class="highlight-check">✓</span>
+              <span>Sub-second mobile speed • Direct Google Maps conversion</span>
+            </div>
+
+            <div class="testimonial-author-row">
+              <div class="author-avatar avatar-blue">VR</div>
+              <div class="author-meta">
+                <div class="author-name">Chef Vikramaditya Rathore</div>
+                <div class="author-role">Managing Partner &amp; Culinary Director</div>
+                <div class="author-company">Spice Route Coastal Bistro • Goa</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 04: The Daily Grind & Bakehouse -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-top">
+              <div class="star-rating" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="establishment-tag tag-bakery">🥐 Specialty Bakehouse</span>
+            </div>
+
+            <p class="testimonial-body">
+              “As first-time café owners, handling domains, email setup, and Google Business profiles felt overwhelming.
+              Verity Tech delivered a turnkey experience in under a week. Transparent pricing, no confusing jargon, and
+              full ownership handed over on day one. Our morning brunch crowd has doubled.”
+            </p>
+
+            <div class="testimonial-highlight">
+              <span class="highlight-check">✓</span>
+              <span>Turnkey 5-day delivery • 100% credential &amp; domain ownership</span>
+            </div>
+
+            <div class="testimonial-author-row">
+              <div class="author-avatar avatar-purple">MT</div>
+              <div class="author-meta">
+                <div class="author-name">Meera Sen &amp; Tanmay Roy</div>
+                <div class="author-role">Co-Founders &amp; Bakers</div>
+                <div class="author-company">The Daily Grind &amp; Bakehouse • Kolkata</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Why Choose Verity Tech
+         ========================================================================== -->
+    <section class="why-section section" id="why">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label">WHY VERITY TECH</div>
+          <h2 class="section-heading">More than a website. A better digital presence.</h2>
+          <p class="section-subheading">
+            We don't just write code; we align every screen, interaction, and workflow with your real-world customer
+            habits.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <!-- Card 1 -->
+          <div class="why-card">
+            <div class="why-icon">🎯</div>
+            <h3 class="why-title">Business First</h3>
+            <p class="why-desc">
+              Every website is designed around your target customers and business goals—driving inquiries, orders, and
+              credibility.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="why-card">
+            <div class="why-icon">📱</div>
+            <h3 class="why-title">Mobile First</h3>
+            <p class="why-desc">
+              Engineered to look outstanding and load rapidly on smartphones, tablets, and wide desktop screens alike.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="why-card">
+            <div class="why-icon">💎</div>
+            <h3 class="why-title">Modern Design</h3>
+            <p class="why-desc">
+              Clean, contemporary dark interfaces and elegant typography that make your business stand out from
+              competitors.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="why-card">
+            <div class="why-icon">⚡</div>
+            <h3 class="why-title">Conversion Focused</h3>
+            <p class="why-desc">
+              Clear, strategic calls-to-action that encourage visitors to contact, book tables, request quotes, or
+              message on WhatsApp.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="why-card">
+            <div class="why-icon">🔑</div>
+            <h3 class="why-title">Easy Handover</h3>
+            <p class="why-desc">
+              Complete client ownership with straightforward access, documentation, and credentials provided after
+              launch.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="why-card">
+            <div class="why-icon">🤝</div>
+            <h3 class="why-title">Flexible Support</h3>
+            <p class="why-desc">
+              Optional ongoing maintenance, content updates, and technical assistance whenever your business evolves.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Our Process Timeline (4 Steps)
+         ========================================================================== -->
+    <section class="process-section section" id="process">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">OUR PROCESS</div>
+          <h2 class="section-heading">Simple process. Serious results.</h2>
+          <p class="section-subheading">
+            A clear, collaborative 4-step workflow from the first conversation to a live, polished website.
+          </p>
+        </div>
+
+        <div class="process-timeline">
+          <!-- Step 1 -->
+          <div class="process-step">
+            <div class="process-node">01</div>
+            <h3 class="process-step-title">Discover</h3>
+            <p class="process-step-desc">
+              Understand the business, audience, goals, brand voice, and technical requirements to create a focused
+              project scope.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-step">
+            <div class="process-node">02</div>
+            <h3 class="process-step-title">Design</h3>
+            <p class="process-step-desc">
+              Plan the structure, content wireframes, color palette, and visual direction tailored to appeal to your
+              exact clients.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-step">
+            <div class="process-node">03</div>
+            <h3 class="process-step-title">Build</h3>
+            <p class="process-step-desc">
+              Develop a fast, responsive, mobile-optimized website with integrated forms, booking hooks, and WhatsApp
+              flows.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-step">
+            <div class="process-node">04</div>
+            <h3 class="process-step-title">Launch</h3>
+            <p class="process-step-desc">
+              Conduct quality assurance, connect your custom domain, optimize SEO metadata, deploy, and hand over the
+              website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         About Verity Tech (Split Screen Redesign)
+         ========================================================================== -->
+    <section class="about-section section" id="about">
+      <div class="container about-grid">
+        <!-- Visual Column: Studio Architecture Showcase -->
+        <div class="about-showcase-card">
+          <div class="about-showcase-header">
+            <div class="about-showcase-tag">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+              <span>Studio Architecture</span>
+            </div>
+            <div class="about-showcase-status">
+              <span class="live-dot"></span>
+              <span>Production Ready</span>
+            </div>
+          </div>
+
+          <!-- Abstract Wireframe & Multi-Device Canvas -->
+          <div class="about-craft-canvas">
+            <div
+              style="font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">
+              Responsive Viewport Engine
+            </div>
+            <div class="canvas-wireframe-grid">
+              <div class="wireframe-block">
+                <div class="wireframe-line accent"></div>
+                <div class="wireframe-line"></div>
+                <div class="wireframe-line" style="width: 80%;"></div>
+              </div>
+              <div class="wireframe-block">
+                <div class="wireframe-line secondary"></div>
+                <div class="wireframe-line"></div>
+                <div class="wireframe-line" style="width: 65%;"></div>
+              </div>
+            </div>
+            <div
+              style="display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: var(--text-secondary); padding-top: 0.5rem; border-top: 1px solid var(--border-subtle); flex-wrap: wrap; gap: 0.5rem;">
+              <span>📱 Mobile First</span>
+              <span>⚡ CWV Tuned</span>
+              <span>🔒 SSL Secure</span>
+            </div>
+          </div>
+
+          <!-- Benchmark Badges (Honest metrics, no fake numbers) -->
+          <div class="about-metrics-row">
+            <div class="about-metric-pill">
+              <span class="about-metric-icon">🚀</span>
+              <div>
+                <div class="about-metric-val">99+</div>
+                <div class="about-metric-label">Performance Score</div>
+              </div>
+            </div>
+            <div class="about-metric-pill">
+              <span class="about-metric-icon">💎</span>
+              <div>
+                <div class="about-metric-val">100%</div>
+                <div class="about-metric-label">Custom Architecture</div>
+              </div>
+            </div>
+            <div class="about-metric-pill">
+              <span class="about-metric-icon">⏱️</span>
+              <div>
+                <div class="about-metric-val">&lt; 24h</div>
+                <div class="about-metric-label">Response SLA</div>
+              </div>
+            </div>
+            <div class="about-metric-pill">
+              <span class="about-metric-icon">🔓</span>
+              <div>
+                <div class="about-metric-val">0%</div>
+                <div class="about-metric-label">Vendor Lock-In</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Column -->
+        <div>
+          <div class="section-label">ABOUT VERITY TECH</div>
+          <h2 class="section-heading">Digital solutions for businesses ready to be taken seriously online.</h2>
+          <p class="about-text">
+            Verity Tech is a modern web development and digital services studio focused on helping businesses establish
+            a credible, high-converting online presence.
+          </p>
+          <p class="about-text">
+            From artisanal cafés and fine-dining restaurants to corporate consulting firms and emerging brands, we
+            engineer practical digital experiences designed around the exact way modern customers explore, book, and
+            buy.
+          </p>
+
+          <!-- 4 Feature Pillars (2x2 Grid) -->
+          <div class="about-pillars-grid">
+            <!-- Pillar 1 -->
+            <div class="about-pillar-card">
+              <div class="about-pillar-top">
+                <span class="about-pillar-icon">🌐</span>
+                <h3 class="about-pillar-title">Global Studio</h3>
+              </div>
+              <p class="about-pillar-desc">
+                High-standard digital experiences built for local businesses and remote international clients alike.
+              </p>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="about-pillar-card">
+              <div class="about-pillar-top">
+                <span class="about-pillar-icon">📱</span>
+                <h3 class="about-pillar-title">Mobile First</h3>
+              </div>
+              <p class="about-pillar-desc">
+                Over 70% of visits occur on phones. We optimize touch interactions, load speed, and instant navigation.
+              </p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="about-pillar-card">
+              <div class="about-pillar-top">
+                <span class="about-pillar-icon">⚡</span>
+                <h3 class="about-pillar-title">Action Focused</h3>
+              </div>
+              <p class="about-pillar-desc">
+                Seamless QR menus, online reservation hooks, and WhatsApp connections that turn visitors into paying
+                patrons.
+              </p>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="about-pillar-card">
+              <div class="about-pillar-top">
+                <span class="about-pillar-icon">🔑</span>
+                <h3 class="about-pillar-title">Full Ownership</h3>
+              </div>
+              <p class="about-pillar-desc">
+                Complete client handover with full credentials, documentation, and zero restrictive dependencies.
+              </p>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="#contact" class="btn btn-primary">Work with Verity Tech</a>
+            <a href="#testimonials" class="btn btn-secondary">Read Client Reviews →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Industries Section (Who We Work With)
+         ========================================================================== -->
+    <section class="industries-section section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label">INDUSTRIES</div>
+          <h2 class="section-heading">Who We Work With</h2>
+          <p class="section-subheading">
+            Tailored digital interfaces built around the distinct sales and enquiry habits of varied business sectors.
+          </p>
+        </div>
+
+        <div class="industries-grid">
+          <div class="industry-card">
+            <span class="industry-icon">☕</span>
+            <span class="industry-name">Cafés</span>
+          </div>
+          <div class="industry-card">
+            <span class="industry-icon">🍽</span>
+            <span class="industry-name">Restaurants</span>
+          </div>
+          <div class="industry-card">
+            <span class="industry-icon">🏢</span>
+            <span class="industry-name">Local Businesses</span>
+          </div>
+          <div class="industry-card">
+            <span class="industry-icon">💼</span>
+            <span class="industry-name">Professionals</span>
+          </div>
+          <div class="industry-card">
+            <span class="industry-icon">💄</span>
+            <span class="industry-name">Beauty &amp; Wellness</span>
+          </div>
+          <div class="industry-card">
+            <span class="industry-icon">🏠</span>
+            <span class="industry-name">Real Estate</span>
+          </div>
+          <div class="industry-card">
+            <span class="industry-icon">🎓</span>
+            <span class="industry-name">Education</span>
+          </div>
+          <div class="industry-card">
+            <span class="industry-icon">✈</span>
+            <span class="industry-name">Travel</span>
+          </div>
+          <div class="industry-card">
+            <span class="industry-icon">🛍</span>
+            <span class="industry-name">Small Brands</span>
+          </div>
+          <div class="industry-card">
+            <span class="industry-icon">🚀</span>
+            <span class="industry-name">Startups</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Digital Setup & Assistance Section
+         ========================================================================== -->
+    <section class="digital-services-section section">
+      <div class="container">
+        <div class="digital-services-box">
+          <div class="section-label">DIGITAL ASSISTANCE</div>
+          <h2 class="section-heading" style="margin-bottom: 0.75rem;">
+            Need help getting your business online?
+          </h2>
+          <p class="section-subheading">
+            Beyond standard website code, we handle the essential digital setups so you can launch smoothly without
+            technical confusion.
+          </p>
+
+          <div class="digital-grid">
+            <div class="digital-item">
+              <span class="digital-item-icon">🌐</span>
+              <div>
+                <div class="digital-item-title">Domain Setup</div>
+                <div class="digital-item-desc">Assistance securing and configuring your custom .com / .in domain.</div>
+              </div>
+            </div>
+
+            <div class="digital-item">
+              <span class="digital-item-icon">✉️</span>
+              <div>
+                <div class="digital-item-title">Business Email</div>
+                <div class="digital-item-desc">Setting up professional mailboxes (e.g. contact@yourbrand.com).</div>
+              </div>
+            </div>
+
+            <div class="digital-item">
+              <span class="digital-item-icon">📍</span>
+              <div>
+                <div class="digital-item-title">Google Business Profile</div>
+                <div class="digital-item-desc">Assistance creating and optimizing your local Google Maps listing.</div>
+              </div>
+            </div>
+
+            <div class="digital-item">
+              <span class="digital-item-icon">📱</span>
+              <div>
+                <div class="digital-item-title">QR Menu Setup</div>
+                <div class="digital-item-desc">Generating durable high-res QR cards linking straight to mobile menus.
+                </div>
+              </div>
+            </div>
+
+            <div class="digital-item">
+              <span class="digital-item-icon">💬</span>
+              <div>
+                <div class="digital-item-title">WhatsApp Setup</div>
+                <div class="digital-item-desc">Configuring WhatsApp Business quick replies, catalog links &amp; web
+                  hooks.</div>
+              </div>
+            </div>
+
+            <div class="digital-item">
+              <span class="digital-item-icon">📝</span>
+              <div>
+                <div class="digital-item-title">Online Forms</div>
+                <div class="digital-item-desc">Digital intake sheets for customer inquiries, contracts and feedback.
+                </div>
+              </div>
+            </div>
+
+            <div class="digital-item">
+              <span class="digital-item-icon">📅</span>
+              <div>
+                <div class="digital-item-title">Booking Setup</div>
+                <div class="digital-item-desc">Connecting digital calendar slots to your phone notification feed.</div>
+              </div>
+            </div>
+
+            <div class="digital-item">
+              <span class="digital-item-icon">🎫</span>
+              <div>
+                <div class="digital-item-title">E-Ticket Assistance</div>
+                <div class="digital-item-desc">Guidance navigating official portals for digital event &amp; travel
+                  e-tickets.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="digital-disclaimer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#75A7FF" stroke-width="2"
+              style="flex-shrink: 0;">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span>
+              <strong>Service Scope Notice:</strong> Verity Tech provides private technical setup, design, and
+              onboarding assistance for business owners. We are an independent digital studio and do not claim to be an
+              official government agency, railway, airline, ticketing portal, or financial service provider.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         High-Impact CTA Section
+         ========================================================================== -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-card">
+          <div class="section-label" style="justify-content: center;">READY TO UPGRADE?</div>
+          <h2 class="cta-heading">Your business deserves a better first impression.</h2>
+          <p class="cta-subheading">
+            Tell us what you’re building. We’ll help turn it into a professional digital experience that attracts real
+            customers.
+          </p>
+          <div class="cta-actions">
+            <a href="#contact" class="btn btn-primary">Start a Project</a>
+            <button class="btn btn-whatsapp" id="directWhatsAppBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+              </svg>
+              <span>WhatsApp Us</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Contact Section & Project Enquiry Engine
+         ========================================================================== -->
+    <section class="contact-section section" id="contact">
+      <div class="container contact-grid">
+        <!-- Contact Info Column -->
+        <div class="contact-info-col">
+          <div class="section-label">GET IN TOUCH</div>
+          <h2 class="section-heading">Let’s build something that works.</h2>
+          <p class="section-subheading">
+            Fill out the form with your project details or message us directly on WhatsApp. We typically review
+            requirements and reply in under 24 hours.
+          </p>
+
+          <div class="contact-channels">
+            <!-- Email -->
+            <a href="mailto:hello@veritytech.in" class="contact-channel-card">
+              <div class="channel-icon">✉️</div>
+              <div class="channel-detail">
+                <span class="channel-label">Email Us</span>
+                <span class="channel-val">hello@veritytech.in</span>
+              </div>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/919876543210?text=Hello%20Verity%20Tech%20team" target="_blank"
+              class="contact-channel-card">
+              <div class="channel-icon channel-wa">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
+                </svg>
+              </div>
+              <div class="channel-detail">
+                <span class="channel-label">WhatsApp Quick Chat</span>
+                <span class="channel-val">Chat with us →</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="contact-note">
+            <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+              🌐 Digital Studio • Remote &amp; Global Collaboration
+            </div>
+            <div>
+              We work with founders, restaurateurs, professionals, and growing brands locally and internationally
+              seeking high-impact web development.
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Column -->
+        <div class="contact-form-wrap">
+          <form id="projectEnquiryForm">
+            <div class="form-grid">
+              <!-- Name -->
+              <div class="form-group">
+                <label for="contactName" class="form-label">Your Name *</label>
+                <input type="text" id="contactName" class="form-input" placeholder="e.g. Rohan Sharma" required>
+              </div>
+
+              <!-- Business Name -->
+              <div class="form-group">
+                <label for="contactBusinessName" class="form-label">Business Name</label>
+                <input type="text" id="contactBusinessName" class="form-input" placeholder="e.g. Blue Lagoon Café">
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Email Address *</label>
+                <input type="email" id="contactEmail" class="form-input" placeholder="you@business.com" required>
+              </div>
+
+              <!-- Phone / WhatsApp -->
+              <div class="form-group">
+                <label for="contactPhone" class="form-label">Phone / WhatsApp *</label>
+                <input type="tel" id="contactPhone" class="form-input" placeholder="+91 98765 43210" required>
+              </div>
+
+              <!-- Business Type Dropdown -->
+              <div class="form-group">
+                <label for="contactBusinessType" class="form-label">Business Type</label>
+                <select id="contactBusinessType" class="form-select">
+                  <option value="Café">Café</option>
+                  <option value="Restaurant">Restaurant</option>
+                  <option value="Local Business">Local Business</option>
+                  <option value="Professional">Professional</option>
+                  <option value="Startup">Startup</option>
+                  <option value="Creator">Creator</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <!-- What do you need? Dropdown -->
+              <div class="form-group">
+                <label for="contactService" class="form-label">What do you need?</label>
+                <select id="contactService" class="form-select">
+                  <option value="New Website">New Website</option>
+                  <option value="Website Redesign">Website Redesign</option>
+                  <option value="Landing Page">Landing Page</option>
+                  <option value="Booking System">Booking System</option>
+                  <option value="Digital Menu">Digital Menu</option>
+                  <option value="Online Forms">Online Forms</option>
+                  <option value="WhatsApp Integration">WhatsApp Integration</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <!-- Budget Range Dropdown -->
+              <div class="form-group full-width">
+                <label for="contactBudget" class="form-label">Estimated Budget Range</label>
+                <select id="contactBudget" class="form-select">
+                  <option value="Under ₹10,000">Under ₹10,000</option>
+                  <option value="₹10,000 – ₹25,000" selected>₹10,000 – ₹25,000</option>
+                  <option value="₹25,000 – ₹50,000">₹25,000 – ₹50,000</option>
+                  <option value="₹50,000+">₹50,000+</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+
+              <!-- Message Details -->
+              <div class="form-group full-width">
+                <label for="contactMessage" class="form-label">Tell us about your project</label>
+                <textarea id="contactMessage" class="form-textarea"
+                  placeholder="Describe what you want to build, any reference sites you like, or specific features you need..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-group full-width" style="margin-top: 0.5rem;">
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  Send Project Enquiry →
+                </button>
+              </div>
+
+              <!-- Form Status Banner -->
+              <div class="form-group full-width">
+                <div class="form-status" id="formStatus"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Summary -->
+        <div class="footer-brand-col">
+          <div class="brand-logo">
+            <div class="logo-mark">
+              <svg width="20" height="20" viewBox="0 0 64 64" fill="none">
+                <path d="M16 18L32 46L48 18H39L32 32L25 18H16Z" fill="#63E6BE" />
+              </svg>
+            </div>
+            <span>Verity<span class="logo-web">Tech</span></span>
+          </div>
+          <p class="footer-desc">
+            Digital studio specializing in modern web development and digital services. Experiences built for growing
+            brands globally.
+          </p>
+          <div
+            style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--accent-mint);">
+            <span
+              style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-mint); display: inline-block;"></span>
+            <span>Accepting new client projects</span>
+          </div>
+        </div>
+
+        <!-- Column 1: Services -->
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services" class="footer-link">Business Websites</a></li>
+            <li><a href="#services" class="footer-link">Restaurant Websites</a></li>
+            <li><a href="#services" class="footer-link">Landing Pages</a></li>
+            <li><a href="#services" class="footer-link">Booking Systems</a></li>
+            <li><a href="#services" class="footer-link">Digital Menus</a></li>
+            <li><a href="#services" class="footer-link">Website Maintenance</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Studio -->
+        <div>
+          <h4 class="footer-col-title">Studio</h4>
+          <ul class="footer-links">
+            <li><a href="#about" class="footer-link">About Verity Tech</a></li>
+            <li><a href="#testimonials" class="footer-link">Client Testimonials</a></li>
+            <li><a href="#why" class="footer-link">Why Choose Us</a></li>
+            <li><a href="#process" class="footer-link">Our Process</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Connect -->
+        <div>
+          <h4 class="footer-col-title">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@veritytech.in" class="footer-link">Email</a></li>
+            <li><a href="https://wa.me/919876543210" target="_blank" class="footer-link">WhatsApp</a></li>
+            <li><a href="#contact" class="footer-link">Instagram</a></li>
+            <li><a href="#contact" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 Verity Tech. All rights reserved.
+        </div>
+        <div>
+          Digital Studio • Web Development • Working Globally
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript Engine -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

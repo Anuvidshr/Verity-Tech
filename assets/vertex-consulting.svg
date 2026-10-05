@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <defs>
+    <linearGradient id="vcBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061222"/>
+      <stop offset="100%" stop-color="#030814"/>
+    </linearGradient>
+    <linearGradient id="vcAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#75A7FF"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#vcBg)"/>
+  <rect x="20" y="20" width="560" height="360" rx="16" fill="#0A1628" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+  
+  <!-- Mini Header -->
+  <rect x="40" y="45" width="130" height="14" rx="4" fill="#F8FAFC" opacity="0.9"/>
+  <rect x="360" y="48" width="50" height="8" rx="4" fill="#94A3B8" opacity="0.5"/>
+  <rect x="425" y="48" width="50" height="8" rx="4" fill="#94A3B8" opacity="0.5"/>
+  <rect x="490" y="42" width="70" height="20" rx="10" fill="url(#vcAccent)"/>
+  <text x="502" y="56" font-family="'Space Grotesk', sans-serif" font-size="9" font-weight="700" fill="#030814">CONNECT</text>
+
+  <!-- Hero Banner -->
+  <rect x="40" y="85" width="520" height="150" rx="12" fill="#0D1D34" stroke="rgba(117,167,255,0.25)" stroke-width="1"/>
+  
+  <!-- Financial Growth Chart Graphic -->
+  <path d="M430 185 L460 165 L485 175 L515 130 L535 140" stroke="#75A7FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="515" cy="130" r="4" fill="#63E6BE"/>
+  <path d="M430 185 L460 165 L485 175 L515 130 L535 140 V 195 H 430 Z" fill="rgba(117,167,255,0.08)"/>
+
+  <!-- Content typography -->
+  <rect x="65" y="110" width="135" height="12" rx="6" fill="#75A7FF" opacity="0.9"/>
+  <text x="73" y="119" font-family="sans-serif" font-size="8" font-weight="700" fill="#030814">MANAGEMENT CONSULTING</text>
+  <text x="65" y="152" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="700" fill="#F8FAFC">Vertex Strategy Partners</text>
+  <text x="65" y="174" font-family="sans-serif" font-size="11" fill="#94A3B8">Cross-border advisory, corporate governance &amp; institutional scalability.</text>
+  
+  <rect x="65" y="195" width="135" height="26" rx="13" fill="#75A7FF"/>
+  <text x="78" y="212" font-family="sans-serif" font-size="10" font-weight="700" fill="#030814">Book Executive Call</text>
+  <rect x="210" y="195" width="100" height="26" rx="13" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)"/>
+  <text x="222" y="212" font-family="sans-serif" font-size="10" fill="#F8FAFC">Practice Areas</text>
+
+  <!-- Feature Cards Row -->
+  <rect x="40" y="255" width="160" height="100" rx="8" fill="#091526" stroke="rgba(255,255,255,0.06)"/>
+  <text x="55" y="280" font-family="sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">Institutional Trust</text>
+  <text x="55" y="298" font-family="sans-serif" font-size="9" fill="#94A3B8">Engineered for board-level audits and high-ticket client intake.</text>
+  <rect x="55" y="322" width="75" height="16" rx="4" fill="rgba(117,167,255,0.15)"/>
+  <text x="63" y="333" font-family="sans-serif" font-size="8" font-weight="700" fill="#75A7FF">Enterprise</text>
+
+  <rect x="220" y="255" width="160" height="100" rx="8" fill="#091526" stroke="rgba(255,255,255,0.06)"/>
+  <text x="235" y="280" font-family="sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">Lead Validation</text>
+  <text x="235" y="298" font-family="sans-serif" font-size="9" fill="#94A3B8">Pre-qualification questionnaire for high-value leads.</text>
+  <rect x="235" y="322" width="75" height="16" rx="4" fill="rgba(99,230,190,0.15)"/>
+  <text x="243" y="333" font-family="sans-serif" font-size="8" font-weight="700" fill="#63E6BE">High Caliber</text>
+
+  <rect x="400" y="255" width="160" height="100" rx="8" fill="#091526" stroke="rgba(255,255,255,0.06)"/>
+  <text x="415" y="280" font-family="sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">Case Repository</text>
+  <text x="415" y="298" font-family="sans-serif" font-size="9" fill="#94A3B8">Searchable client outcomes and ROI metrics.</text>
+  <rect x="415" y="322" width="70" height="16" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <text x="423" y="333" font-family="sans-serif" font-size="8" font-weight="700" fill="#F8FAFC">Demonstrated</text>
+</svg>
