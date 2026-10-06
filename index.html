@@ -30,7 +30,8 @@
   <meta property="twitter:image" content="assets/maison-cafe.svg">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
 
   <!-- Google Fonts: Fraunces & Manrope -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,13 +69,7 @@
     <div class="container navbar">
       <!-- Brand Logo -->
       <a href="#hero" class="brand-logo" aria-label="Verity Flux Home">
-        <div class="logo-mark">
-          <svg width="20" height="20" viewBox="0 0 64 64" fill="none">
-            <path d="M16 18L32 46L48 18H39L32 32L25 18H16Z" fill="#63E6BE" />
-            <circle cx="32" cy="18" r="4" fill="#75A7FF" />
-          </svg>
-        </div>
-        <span><span class="logo-nexa">Verity</span><span class="logo-web">Flux</span></span>
+        <img src="assets/logo.png" alt="Verity Flux" class="brand-logo-img" width="58" height="54">
       </a>
 
       <!-- Desktop Nav Links -->
@@ -127,14 +122,9 @@
   <aside class="mobile-drawer" aria-label="Mobile Navigation Menu">
     <div>
       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2.5rem;">
-        <div class="brand-logo">
-          <div class="logo-mark">
-            <svg width="20" height="20" viewBox="0 0 64 64" fill="none">
-              <path d="M16 18L32 46L48 18H39L32 32L25 18H16Z" fill="#63E6BE" />
-            </svg>
-          </div>
-          <span>Verity<span class="logo-web">Flux</span></span>
-        </div>
+        <a href="#hero" class="brand-logo" aria-label="Verity Flux Home">
+          <img src="assets/logo.png" alt="Verity Flux" class="brand-logo-img" width="52" height="48">
+        </a>
 
         <!-- Mobile Theme Toggle -->
         <button class="theme-toggle-btn" id="mobileThemeToggleBtn" aria-label="Toggle Light / Dark Theme"
@@ -213,95 +203,186 @@
           </div>
         </div>
 
-        <!-- Hero Visual Mockup -->
-        <div class="hero-visual-wrap">
-          <div class="mockup-browser">
-            <div class="mockup-header">
-              <div class="mockup-dots">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <div class="mockup-address-bar">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                </svg>
-                <span>verityflux.in/showcase/artisanal-bistro</span>
-              </div>
-            </div>
+        <!-- The Flux System: Animated Digital Studio Composition -->
+        <div class="hero-visual-wrap" id="heroVisualWrap" aria-label="The Flux System — Connected Digital Ecosystem">
+          <div class="flux-system-container" id="fluxSystem">
+            <!-- Ambient Studio Glows -->
+            <div class="flux-ambient-glow" aria-hidden="true"></div>
+            <div class="flux-ambient-mesh" aria-hidden="true"></div>
 
-            <div class="mockup-body">
-              <!-- Mini Navigation -->
-              <div class="mini-site-nav">
-                <div class="mini-logo">The Foundry Bistro</div>
-                <div class="mini-pill">Book a Table</div>
+            <!-- 3D Perspective Parallax Stage -->
+            <div class="flux-stage" id="fluxStage">
+
+              <!-- Neural Connection Matrix (SVG Beams & Data Flow) -->
+              <svg class="flux-connections-svg" viewBox="0 0 540 500" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <defs>
+                  <linearGradient id="fluxBeam1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#D4A55A" stop-opacity="0.9" />
+                    <stop offset="50%" stop-color="#2563EB" stop-opacity="0.7" />
+                    <stop offset="100%" stop-color="#1A5750" stop-opacity="0.3" />
+                  </linearGradient>
+                  <linearGradient id="fluxBeam2" x1="100%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#2563EB" stop-opacity="0.9" />
+                    <stop offset="50%" stop-color="#4FA79C" stop-opacity="0.7" />
+                    <stop offset="100%" stop-color="#D4A55A" stop-opacity="0.3" />
+                  </linearGradient>
+                  <linearGradient id="fluxBeam3" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#1A5750" stop-opacity="0.9" />
+                    <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.7" />
+                    <stop offset="100%" stop-color="#D4A55A" stop-opacity="0.3" />
+                  </linearGradient>
+                  <linearGradient id="fluxBeam4" x1="100%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#D4A55A" stop-opacity="0.9" />
+                    <stop offset="50%" stop-color="#2563EB" stop-opacity="0.7" />
+                    <stop offset="100%" stop-color="#1A5750" stop-opacity="0.3" />
+                  </linearGradient>
+                  <filter id="fluxGlow" x="-30%" y="-30%" width="160%" height="160%">
+                    <feGaussianBlur stdDeviation="3.5" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <!-- Base Subtle Guide Tracks -->
+                <path class="flux-track" d="M 145 115 C 190 155, 220 200, 270 250" />
+                <path class="flux-track" d="M 395 115 C 350 155, 320 200, 270 250" />
+                <path class="flux-track" d="M 140 385 C 190 345, 220 300, 270 250" />
+                <path class="flux-track" d="M 400 385 C 350 345, 320 300, 270 250" />
+
+                <!-- Flow Beams with Traveling Pulse -->
+                <path class="flux-pulse-line beam-web" id="beamWeb" d="M 145 115 C 190 155, 220 200, 270 250" stroke="url(#fluxBeam1)" />
+                <path class="flux-pulse-line beam-book" id="beamBook" d="M 395 115 C 350 155, 320 200, 270 250" stroke="url(#fluxBeam2)" />
+                <path class="flux-pulse-line beam-qr" id="beamQr" d="M 140 385 C 190 345, 220 300, 270 250" stroke="url(#fluxBeam3)" />
+                <path class="flux-pulse-line beam-grow" id="beamGrow" d="M 400 385 C 350 345, 320 300, 270 250" stroke="url(#fluxBeam4)" />
+
+                <!-- Moving Energy Nodes (Chaos Inflowing into Polished Core) -->
+                <circle class="flux-particle p-web" r="3.5" fill="#D4A55A" filter="url(#fluxGlow)">
+                  <animateMotion repeatCount="indefinite" dur="4.2s" path="M 145 115 C 190 155, 220 200, 270 250" keyPoints="0;1" keyTimes="0;1" />
+                </circle>
+                <circle class="flux-particle p-book" r="3.5" fill="#3B82F6" filter="url(#fluxGlow)">
+                  <animateMotion repeatCount="indefinite" dur="4.8s" path="M 395 115 C 350 155, 320 200, 270 250" keyPoints="0;1" keyTimes="0;1" />
+                </circle>
+                <circle class="flux-particle p-qr" r="3.5" fill="#4FA79C" filter="url(#fluxGlow)">
+                  <animateMotion repeatCount="indefinite" dur="5.2s" path="M 140 385 C 190 345, 220 300, 270 250" keyPoints="0;1" keyTimes="0;1" />
+                </circle>
+                <circle class="flux-particle p-grow" r="3.5" fill="#D4A55A" filter="url(#fluxGlow)">
+                  <animateMotion repeatCount="indefinite" dur="4.5s" path="M 400 385 C 350 345, 320 300, 270 250" keyPoints="0;1" keyTimes="0;1" />
+                </circle>
+              </svg>
+
+              <!-- Central Flux Engine (Liquid Glass Ribbon & Monogram Core) -->
+              <div class="flux-core-wrapper" id="fluxCore" aria-hidden="true">
+                <!-- Outer 3D Gyroscopic Orbital Rings -->
+                <div class="flux-ring ring-1"></div>
+                <div class="flux-ring ring-2"></div>
+                <div class="flux-ring ring-3"></div>
+
+                <!-- Crystalline Liquid Glass Orb -->
+                <div class="flux-orb-sphere">
+                  <!-- Dynamic Aurora Nebula Shimmer -->
+                  <div class="flux-orb-aurora"></div>
+                  
+                  <!-- Glass Specular Highlight Curve -->
+                  <div class="flux-orb-specular"></div>
+
+                  <!-- Suspended Verity Flux Monogram Core -->
+                  <div class="flux-monogram-core">
+                    <img src="assets/logo-mark.png" alt="Verity Flux Core" class="flux-monogram-img" width="68" height="68">
+                    <div class="flux-monogram-halo"></div>
+                  </div>
+                </div>
+
+                <!-- Ambient Orbital Dust Sparks -->
+                <div class="flux-sparkle sp-1"></div>
+                <div class="flux-sparkle sp-2"></div>
+                <div class="flux-sparkle sp-3"></div>
               </div>
 
-              <!-- Mini Hero Banner -->
-              <div class="mini-hero">
-                <div class="mini-badge">BISTRO &amp; WOODFIRED GRILL</div>
-                <div class="mini-title">Handcrafted dining for modern food lovers</div>
-                <p class="mini-desc">Seasonal menus, artisan sourdough pizzas and weekend live kitchen events.</p>
-                <div class="mini-actions">
-                  <span class="mini-btn mini-btn-accent">Reserve Table</span>
-                  <span class="mini-btn mini-btn-ghost">View QR Menu</span>
+              <!-- Floating UI Fragment 1: WEB (Top-Left) -->
+              <div class="flux-card card-web" id="fluxCardWeb" data-index="0" role="region" aria-label="Web Design Fragment">
+                <div class="flux-card-inner">
+                  <div class="flux-card-header">
+                    <span class="flux-pill pill-gold">WEB</span>
+                    <span class="flux-live-dot dot-gold"></span>
+                  </div>
+                  <div class="flux-card-title">Web Design</div>
+                  <div class="flux-card-desc">
+                    <span>Bespoke Architecture</span>
+                    <span class="flux-dot-sep">•</span>
+                    <span class="flux-accent-metric">99.8 Perf</span>
+                  </div>
+                  <div class="flux-card-meter">
+                    <div class="meter-bar bar-gold" style="width: 92%;"></div>
+                  </div>
                 </div>
               </div>
 
-              <!-- Mini Service / Feature Row -->
-              <div class="mini-cards-row">
-                <div class="mini-feature-card">
-                  <div class="feat-icon">🍷</div>
-                  <div class="feat-title">Chef Specials</div>
-                  <div class="feat-sub">Weekly Tasting</div>
+              <!-- Floating UI Fragment 2: BOOK (Top-Right) -->
+              <div class="flux-card card-book" id="fluxCardBook" data-index="1" role="region" aria-label="Online Booking Fragment">
+                <div class="flux-card-inner">
+                  <div class="flux-card-header">
+                    <span class="flux-pill pill-blue">BOOK</span>
+                    <span class="flux-live-dot dot-blue"></span>
+                  </div>
+                  <div class="flux-card-title">Online Booking</div>
+                  <div class="flux-card-desc">
+                    <span>24/7 Automation</span>
+                    <span class="flux-dot-sep">•</span>
+                    <span class="flux-accent-metric">Zero Friction</span>
+                  </div>
+                  <div class="flux-card-meter">
+                    <div class="meter-bar bar-blue" style="width: 86%;"></div>
+                  </div>
                 </div>
-                <div class="mini-feature-card">
-                  <div class="feat-icon">⭐</div>
-                  <div class="feat-title">4.9 Star Rating</div>
-                  <div class="feat-sub">500+ Verified</div>
+              </div>
+
+              <!-- Floating UI Fragment 3: QR (Bottom-Left) -->
+              <div class="flux-card card-qr" id="fluxCardQr" data-index="2" role="region" aria-label="QR Menu Fragment">
+                <div class="flux-card-inner">
+                  <div class="flux-card-header">
+                    <span class="flux-pill pill-teal">QR</span>
+                    <span class="flux-live-dot dot-teal"></span>
+                  </div>
+                  <div class="flux-card-title">QR Menu</div>
+                  <div class="flux-card-desc">
+                    <span>Dynamic Live Sync</span>
+                    <span class="flux-dot-sep">•</span>
+                    <span class="flux-accent-metric">Instant Load</span>
+                  </div>
+                  <div class="flux-card-meter">
+                    <div class="meter-bar bar-teal" style="width: 96%;"></div>
+                  </div>
                 </div>
-                <div class="mini-feature-card">
-                  <div class="feat-icon">💬</div>
-                  <div class="feat-title">WhatsApp Order</div>
-                  <div class="feat-sub">Instant Ping</div>
+              </div>
+
+              <!-- Floating UI Fragment 4: GROW (Bottom-Right) -->
+              <div class="flux-card card-grow" id="fluxCardGrow" data-index="3" role="region" aria-label="Digital Growth Fragment">
+                <div class="flux-card-inner">
+                  <div class="flux-card-header">
+                    <span class="flux-pill pill-amber">GROW</span>
+                    <span class="flux-live-dot dot-amber"></span>
+                  </div>
+                  <div class="flux-card-title">Digital Growth</div>
+                  <div class="flux-card-desc">
+                    <span>+38% Enquiries</span>
+                    <span class="flux-dot-sep">•</span>
+                    <span class="flux-accent-metric">Established</span>
+                  </div>
+                  <div class="flux-card-meter">
+                    <div class="meter-bar bar-amber" style="width: 88%;"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <!-- Feature Metric Badges: Stacked in groups of two below the mockup -->
-          <div class="hero-badges-grid">
-            <div class="hero-feature-badge">
-              <div class="badge-icon badge-icon-mint">📈</div>
-              <div class="badge-info">
-                <div class="badge-title">+38% Enquiries</div>
-                <div class="badge-sub">Average conversion lift</div>
+              <!-- Editorial Concept Caption (Bottom Center) -->
+              <div class="flux-system-caption" aria-hidden="true">
+                <span class="caption-sparkle">✦</span>
+                <span class="caption-text">Unified Digital Ecosystem</span>
+                <span class="caption-pulse-dot"></span>
               </div>
-            </div>
 
-            <div class="hero-feature-badge">
-              <div class="badge-icon badge-icon-blue">📅</div>
-              <div class="badge-info">
-                <div class="badge-title">Online Booking</div>
-                <div class="badge-sub">24/7 Automated capture</div>
-              </div>
-            </div>
-
-            <div class="hero-feature-badge">
-              <div class="badge-icon badge-icon-wa">💬</div>
-              <div class="badge-info">
-                <div class="badge-title">WhatsApp Connected</div>
-                <div class="badge-sub">Zero-friction leads</div>
-              </div>
-            </div>
-
-            <div class="hero-feature-badge">
-              <div class="badge-icon badge-icon-mobile">📱</div>
-              <div class="badge-info">
-                <div class="badge-title">Mobile Optimized</div>
-                <div class="badge-sub">Ultra-fast loading</div>
-              </div>
             </div>
           </div>
         </div>
@@ -1333,14 +1414,9 @@
       <div class="footer-grid">
         <!-- Brand Summary -->
         <div class="footer-brand-col">
-          <div class="brand-logo">
-            <div class="logo-mark">
-              <svg width="20" height="20" viewBox="0 0 64 64" fill="none">
-                <path d="M16 18L32 46L48 18H39L32 32L25 18H16Z" fill="#63E6BE" />
-              </svg>
-            </div>
-            <span>Verity<span class="logo-web">Flux</span></span>
-          </div>
+          <a href="#hero" class="brand-logo footer-brand-logo" aria-label="Verity Flux Home">
+            <img src="assets/logo.png" alt="Verity Flux" class="brand-logo-img footer-logo-img" width="65" height="60">
+          </a>
           <p class="footer-desc">
             Digital studio specializing in modern web development and digital services. Experiences built for growing
             brands globally.

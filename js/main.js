@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initContactForm();
   initScrollAnimations();
+  initFluxSystem();
 });
 
 /* ==========================================================================
@@ -267,3 +268,151 @@ function initScrollAnimations() {
     observer.observe(el);
   });
 }
+
+/* ==========================================================================
+   The Flux System Interactive Controller
+   - 3D mouse parallax
+   - Interactive card proximity & connection beam flaring
+   - Sequential ecosystem polishing cycle
+   ========================================================================== */
+function initFluxSystem() {
+  const heroSection = document.querySelector('.hero-section');
+  const fluxSystem = document.querySelector('#fluxSystem');
+  const fluxStage = document.querySelector('#fluxStage');
+  const cards = document.querySelectorAll('.flux-card');
+
+  if (!fluxSystem || !fluxStage) return;
+
+  const beamMap = {
+    'fluxCardWeb': document.querySelector('#beamWeb'),
+    'fluxCardBook': document.querySelector('#beamBook'),
+    'fluxCardQr': document.querySelector('#beamQr'),
+    'fluxCardGrow': document.querySelector('#beamGrow')
+  };
+
+  const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // --- 1. Smooth 3D Mouse Parallax ---
+  if (!isReducedMotion) {
+    let targetRotX = 0;
+    let targetRotY = 0;
+    let currentRotX = 0;
+    let currentRotY = 0;
+    let isMouseOver = false;
+
+    const onMouseMove = (e) => {
+      if (window.innerWidth <= 640) return;
+      const rect = fluxSystem.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      
+      const dx = (e.clientX - centerX) / (window.innerWidth / 2);
+      const dy = (e.clientY - centerY) / (window.innerHeight / 2);
+
+      targetRotX = Math.max(-7, Math.min(7, -dy * 7));
+      targetRotY = Math.max(-8, Math.min(8, dx * 8));
+      isMouseOver = true;
+    };
+
+    const onMouseLeave = () => {
+      targetRotX = 0;
+      targetRotY = 0;
+      isMouseOver = false;
+    };
+
+    if (heroSection) {
+      heroSection.addEventListener('mousemove', onMouseMove, { passive: true });
+      heroSection.addEventListener('mouseleave', onMouseLeave);
+    }
+
+    function renderParallax() {
+      if (window.innerWidth > 640) {
+        currentRotX += (targetRotX - currentRotX) * 0.08;
+        currentRotY += (targetRotY - currentRotY) * 0.08;
+
+        fluxStage.style.transform = `perspective(1200px) rotateX(${currentRotX.toFixed(2)}deg) rotateY(${currentRotY.toFixed(2)}deg)`;
+      } else {
+        fluxStage.style.transform = 'none';
+      }
+      requestAnimationFrame(renderParallax);
+    }
+    requestAnimationFrame(renderParallax);
+  }
+
+  // --- 2. Card Proximity & Beam Lighting ---
+  let isUserInteracting = false;
+  let interactionTimeout = null;
+
+  cards.forEach(card => {
+    const beam = beamMap[card.id];
+
+    card.addEventListener('mouseenter', () => {
+      isUserInteracting = true;
+      clearTimeout(interactionTimeout);
+
+      // Remove automated focus during active user hover
+      cards.forEach(c => c.classList.remove('active-focus'));
+      card.classList.add('active-focus');
+
+      if (beam) {
+        beam.style.opacity = '1';
+        beam.style.strokeWidth = '3.5px';
+      }
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.classList.remove('active-focus');
+      if (beam) {
+        beam.style.opacity = '';
+        beam.style.strokeWidth = '';
+      }
+
+      interactionTimeout = setTimeout(() => {
+        isUserInteracting = false;
+      }, 1200);
+    });
+  });
+
+  // --- 3. Sequential Ecosystem Polishing Cycle ---
+  if (!isReducedMotion && cards.length > 0) {
+    let activeCardIndex = 0;
+
+    setInterval(() => {
+      if (isUserInteracting) return;
+
+      cards.forEach((c, idx) => {
+        const beam = beamMap[c.id];
+        if (idx === activeCardIndex) {
+          c.classList.add('active-focus');
+          if (beam) {
+            beam.style.opacity = '1';
+            beam.style.strokeWidth = '3px';
+          }
+        } else {
+          c.classList.remove('active-focus');
+          if (beam) {
+            beam.style.opacity = '';
+            beam.style.strokeWidth = '';
+          }
+        }
+      });
+
+      // Clear the pulse after 2.6s so cards breathe between transitions
+      setTimeout(() => {
+        if (!isUserInteracting) {
+          cards.forEach(c => {
+            c.classList.remove('active-focus');
+            const beam = beamMap[c.id];
+            if (beam) {
+              beam.style.opacity = '';
+              beam.style.strokeWidth = '';
+            }
+          });
+        }
+      }, 2600);
+
+      activeCardIndex = (activeCardIndex + 1) % cards.length;
+    }, 4500);
+  }
+}
+
