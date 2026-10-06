@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initScrollAnimations();
   initFluxSystem();
+  initScrollProgressBar();
+  initProcessTimelineScroll();
 });
 
 /* ==========================================================================
@@ -182,7 +184,7 @@ function initContactForm() {
 
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const submitBtn = form.querySelector('button[type="submit"]');
@@ -196,7 +198,9 @@ function initContactForm() {
     const message = form.querySelector('#contactMessage').value.trim();
 
     if (!name || !email || !phone) {
-      alert('Please fill in your Name, Email, and Phone / WhatsApp number.');
+      statusEl.className = 'form-status error';
+      statusEl.innerHTML = '<strong>Please complete required fields:</strong> Name, Email, and Phone / WhatsApp number.';
+      statusEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       return;
     }
 
@@ -216,25 +220,67 @@ function initContactForm() {
       </svg>
       Sending Enquiry...
     `;
+    statusEl.className = 'form-status';
+    statusEl.innerHTML = '';
 
-    // Simulate reliable submission (ready to plug in Formspree/EmailJS)
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalBtnText;
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name,
+          businessName,
+          email,
+          phone,
+          businessType,
+          service,
+          budget,
+          message
+        })
+      });
 
-      statusEl.className = 'form-status success';
+      const result = await response.json().catch(() => ({}));
+
+      if (response.ok && result.success) {
+        statusEl.className = 'form-status success';
+        statusEl.innerHTML = `
+          <strong>Enquiry Received!</strong> Thank you, <strong>${name}</strong>. We've logged your request and sent a confirmation receipt to <strong>${email}</strong>. A digital strategist from Verity Flux will review your brief for <em>${businessName || 'your project'}</em> and reach out within 24 hours.
+          <div style="margin-top: 0.6rem;">
+            <a href="https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi Verity Flux, I just submitted a website enquiry for ${businessName || name} regarding ${service}. My budget is ${budget}.`)}" target="_blank" style="color: var(--gold); text-decoration: underline; font-weight: 600;">
+              Want a faster response? Click here to chat with us on WhatsApp →
+            </a>
+          </div>
+        `;
+        form.reset();
+      } else {
+        const errorMsg = result.error || 'Unable to submit your enquiry. Please verify your details or message us directly on WhatsApp.';
+        statusEl.className = 'form-status error';
+        statusEl.innerHTML = `
+          <strong>Could not send enquiry:</strong> ${errorMsg}
+          <div style="margin-top: 0.6rem;">
+            <a href="https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi Verity Flux, I tried submitting an enquiry for ${businessName || name} regarding ${service} on the website. Can we connect here?`)}" target="_blank" style="color: var(--gold); text-decoration: underline; font-weight: 600;">
+              Click here to message us directly on WhatsApp instead →
+            </a>
+          </div>
+        `;
+      }
+    } catch (networkError) {
+      statusEl.className = 'form-status error';
       statusEl.innerHTML = `
-        <strong>Enquiry Received!</strong> Thank you, <strong>${name}</strong>. A digital strategist from Verity Flux will review your requirements for <em>${businessName || 'your business'}</em> and reach out within 24 hours.
+        <strong>Connection Error:</strong> Could not reach the server. Please check your internet connection or reach out to us directly on WhatsApp.
         <div style="margin-top: 0.6rem;">
-          <a href="https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi Verity Flux, I just submitted an inquiry for ${businessName || name} regarding ${service}. My budget is ${budget}.`)}" target="_blank" style="color: #63E6BE; text-decoration: underline; font-weight: 600;">
-            Want a faster response? Click here to chat with us on WhatsApp →
+          <a href="https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi Verity Flux, I would like to enquire about building a website for ${businessName || name} regarding ${service}.`)}" target="_blank" style="color: var(--gold); text-decoration: underline; font-weight: 600;">
+            Chat on WhatsApp (+91 89828 20353) →
           </a>
         </div>
       `;
-
-      form.reset();
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
       statusEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }, 900);
+    }
   });
 }
 
@@ -414,5 +460,59 @@ function initFluxSystem() {
       activeCardIndex = (activeCardIndex + 1) % cards.length;
     }, 4500);
   }
+}
+
+/* ==========================================================================
+   Editorial Scroll Progress Bar
+   ========================================================================== */
+function initScrollProgressBar() {
+  const bar = document.querySelector('#scrollProgressBar');
+  if (!bar) return;
+
+  function updateProgress() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+  }
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress, { passive: true });
+  updateProgress();
+}
+
+
+/* ==========================================================================
+   Process Timeline Dynamic Scroll Fill & Step Activation
+   ========================================================================== */
+function initProcessTimelineScroll() {
+  const processSection = document.querySelector('#process');
+  const fill = document.querySelector('#processProgressFill');
+  const steps = document.querySelectorAll('.process-step');
+  if (!processSection || !fill || steps.length === 0) return;
+
+  function onScroll() {
+    const rect = processSection.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Track scroll engagement within process section
+    const startOffset = windowHeight * 0.75;
+    const totalDist = rect.height + startOffset * 0.4;
+    const currentProgress = (startOffset - rect.top) / totalDist;
+    const clamped = Math.max(0, Math.min(1, currentProgress));
+
+    // Progress bar width from 0% to 100%
+    fill.style.width = `${(clamped * 100).toFixed(1)}%`;
+
+    // Activate steps sequentially (4 steps: 0-0.25, 0.25-0.5, 0.5-0.75, 0.75-1.0)
+    const activeIndex = Math.min(steps.length - 1, Math.floor(clamped * steps.length));
+    steps.forEach((step, idx) => {
+      step.classList.toggle('is-active', idx <= activeIndex);
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  onScroll();
 }
 

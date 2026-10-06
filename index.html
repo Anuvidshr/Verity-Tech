@@ -61,6 +61,11 @@
 </head>
 
 <body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
+  <!-- Editorial Film Grain Texture Overlay -->
+  <div class="film-grain" aria-hidden="true"></div>
 
   <!-- ==========================================================================
        Sticky Navigation Bar
@@ -195,7 +200,6 @@
               </svg>
               <span>WhatsApp Us</span>
             </a>
-            <a href="#testimonials" class="btn btn-secondary">Client Testimonials</a>
           </div>
           <div class="hero-location-badge">
             <span class="pin-dot"></span>
@@ -217,24 +221,24 @@
               <svg class="flux-connections-svg" viewBox="0 0 540 500" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                 <defs>
                   <linearGradient id="fluxBeam1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#D4A55A" stop-opacity="0.9" />
-                    <stop offset="50%" stop-color="#2563EB" stop-opacity="0.7" />
-                    <stop offset="100%" stop-color="#1A5750" stop-opacity="0.3" />
+                    <stop offset="0%" stop-color="#D4A55A" stop-opacity="0.95" />
+                    <stop offset="50%" stop-color="#B8823A" stop-opacity="0.75" />
+                    <stop offset="100%" stop-color="#7C5320" stop-opacity="0.3" />
                   </linearGradient>
                   <linearGradient id="fluxBeam2" x1="100%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#2563EB" stop-opacity="0.9" />
-                    <stop offset="50%" stop-color="#4FA79C" stop-opacity="0.7" />
-                    <stop offset="100%" stop-color="#D4A55A" stop-opacity="0.3" />
+                    <stop offset="0%" stop-color="#E8C07E" stop-opacity="0.95" />
+                    <stop offset="50%" stop-color="#D4A55A" stop-opacity="0.75" />
+                    <stop offset="100%" stop-color="#9E6E2F" stop-opacity="0.3" />
                   </linearGradient>
                   <linearGradient id="fluxBeam3" x1="0%" y1="100%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#1A5750" stop-opacity="0.9" />
-                    <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.7" />
+                    <stop offset="0%" stop-color="#C48D42" stop-opacity="0.95" />
+                    <stop offset="50%" stop-color="#8C5E28" stop-opacity="0.75" />
                     <stop offset="100%" stop-color="#D4A55A" stop-opacity="0.3" />
                   </linearGradient>
                   <linearGradient id="fluxBeam4" x1="100%" y1="100%" x2="0%" y2="0%">
-                    <stop offset="0%" stop-color="#D4A55A" stop-opacity="0.9" />
-                    <stop offset="50%" stop-color="#2563EB" stop-opacity="0.7" />
-                    <stop offset="100%" stop-color="#1A5750" stop-opacity="0.3" />
+                    <stop offset="0%" stop-color="#D4A55A" stop-opacity="0.95" />
+                    <stop offset="50%" stop-color="#B8823A" stop-opacity="0.75" />
+                    <stop offset="100%" stop-color="#7C5320" stop-opacity="0.3" />
                   </linearGradient>
                   <filter id="fluxGlow" x="-30%" y="-30%" width="160%" height="160%">
                     <feGaussianBlur stdDeviation="3.5" result="blur" />
@@ -261,10 +265,10 @@
                 <circle class="flux-particle p-web" r="3.5" fill="#D4A55A" filter="url(#fluxGlow)">
                   <animateMotion repeatCount="indefinite" dur="4.2s" path="M 145 115 C 190 155, 220 200, 270 250" keyPoints="0;1" keyTimes="0;1" />
                 </circle>
-                <circle class="flux-particle p-book" r="3.5" fill="#3B82F6" filter="url(#fluxGlow)">
+                <circle class="flux-particle p-book" r="3.5" fill="#E8C07E" filter="url(#fluxGlow)">
                   <animateMotion repeatCount="indefinite" dur="4.8s" path="M 395 115 C 350 155, 320 200, 270 250" keyPoints="0;1" keyTimes="0;1" />
                 </circle>
-                <circle class="flux-particle p-qr" r="3.5" fill="#4FA79C" filter="url(#fluxGlow)">
+                <circle class="flux-particle p-qr" r="3.5" fill="#C48D42" filter="url(#fluxGlow)">
                   <animateMotion repeatCount="indefinite" dur="5.2s" path="M 140 385 C 190 345, 220 300, 270 250" keyPoints="0;1" keyTimes="0;1" />
                 </circle>
                 <circle class="flux-particle p-grow" r="3.5" fill="#D4A55A" filter="url(#fluxGlow)">
@@ -323,8 +327,8 @@
               <div class="flux-card card-book" id="fluxCardBook" data-index="1" role="region" aria-label="Online Booking Fragment">
                 <div class="flux-card-inner">
                   <div class="flux-card-header">
-                    <span class="flux-pill pill-blue">BOOK</span>
-                    <span class="flux-live-dot dot-blue"></span>
+                    <span class="flux-pill pill-caramel">BOOK</span>
+                    <span class="flux-live-dot dot-caramel"></span>
                   </div>
                   <div class="flux-card-title">Online Booking</div>
                   <div class="flux-card-desc">
@@ -333,7 +337,7 @@
                     <span class="flux-accent-metric">Zero Friction</span>
                   </div>
                   <div class="flux-card-meter">
-                    <div class="meter-bar bar-blue" style="width: 86%;"></div>
+                    <div class="meter-bar bar-caramel" style="width: 86%;"></div>
                   </div>
                 </div>
               </div>
@@ -342,8 +346,8 @@
               <div class="flux-card card-qr" id="fluxCardQr" data-index="2" role="region" aria-label="QR Menu Fragment">
                 <div class="flux-card-inner">
                   <div class="flux-card-header">
-                    <span class="flux-pill pill-teal">QR</span>
-                    <span class="flux-live-dot dot-teal"></span>
+                    <span class="flux-pill pill-bronze">QR</span>
+                    <span class="flux-live-dot dot-bronze"></span>
                   </div>
                   <div class="flux-card-title">QR Menu</div>
                   <div class="flux-card-desc">
@@ -352,7 +356,7 @@
                     <span class="flux-accent-metric">Instant Load</span>
                   </div>
                   <div class="flux-card-meter">
-                    <div class="meter-bar bar-teal" style="width: 96%;"></div>
+                    <div class="meter-bar bar-bronze" style="width: 96%;"></div>
                   </div>
                 </div>
               </div>
@@ -395,7 +399,7 @@
     <section class="trust-strip">
       <div class="container trust-content">
         <div class="trust-title">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#63E6BE" stroke-width="2.2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.2">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
           </svg>
           <span>Built for businesses that want to grow online:</span>
@@ -415,9 +419,10 @@
          Services Section (12 Services)
          ========================================================================== -->
     <section class="services-section section" id="services">
+      <span class="section-watermark" aria-hidden="true">01</span>
       <div class="container">
         <div class="section-header text-center">
-          <div class="section-label">WHAT WE DO</div>
+          <div class="section-label"><span class="label-track">01</span> <span class="label-divider">/</span> WHAT WE DO</div>
           <h2 class="section-heading">Everything you need to build a stronger online presence.</h2>
           <p class="section-subheading">
             We combine web development with practical digital services so businesses can attract customers, receive
@@ -427,7 +432,19 @@
 
         <div class="services-grid">
           <!-- 01 Business Websites -->
-          <div class="service-card">
+          <div class="service-card" data-cursor="EXPLORE">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <rect x="8" y="8" width="84" height="44" rx="6" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3"/>
+                <path d="M8 20 H92" stroke="currentColor" stroke-width="1"/>
+                <circle cx="20" cy="14" r="2" fill="currentColor"/>
+                <circle cx="28" cy="14" r="2" fill="currentColor"/>
+                <circle cx="36" cy="14" r="2" fill="currentColor"/>
+                <rect x="18" y="28" width="28" height="14" rx="2" stroke="currentColor" stroke-width="1"/>
+                <path d="M54 32 H82 M54 38 H74" stroke="currentColor" stroke-width="1"/>
+              </svg>
+            </div>
             <div>
               <div class="service-card-top">
                 <div class="service-icon-wrap">🌐</div>
@@ -446,7 +463,16 @@
           </div>
 
           <!-- 02 Restaurant & Café Websites -->
-          <div class="service-card">
+          <div class="service-card" data-cursor="EXPLORE">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <circle cx="50" cy="30" r="22" stroke="currentColor" stroke-width="1.2"/>
+                <circle cx="50" cy="30" r="14" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"/>
+                <path d="M50 6 V12 M50 48 V54 M26 30 H32 M68 30 H74" stroke="currentColor" stroke-width="1.2"/>
+                <circle cx="50" cy="30" r="3" fill="currentColor"/>
+              </svg>
+            </div>
             <div>
               <div class="service-card-top">
                 <div class="service-icon-wrap">🍽</div>
@@ -465,7 +491,16 @@
           </div>
 
           <!-- 03 Landing Pages -->
-          <div class="service-card">
+          <div class="service-card" data-cursor="EXPLORE">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <path d="M16 12 L50 48 L84 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M28 12 L50 36 L72 12" stroke="currentColor" stroke-width="1" stroke-dasharray="2 3"/>
+                <circle cx="50" cy="48" r="3.5" fill="currentColor"/>
+                <line x1="50" y1="6" x2="50" y2="24" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 2"/>
+              </svg>
+            </div>
             <div>
               <div class="service-card-top">
                 <div class="service-icon-wrap">🎯</div>
@@ -484,7 +519,20 @@
           </div>
 
           <!-- 04 Booking & Appointment Systems -->
-          <div class="service-card">
+          <div class="service-card" data-cursor="EXPLORE">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <rect x="20" y="10" width="60" height="42" rx="4" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M20 22 H80 M34 6 V12 M66 6 V12" stroke="currentColor" stroke-width="1.2"/>
+                <circle cx="36" cy="32" r="2" fill="currentColor"/>
+                <circle cx="50" cy="32" r="2" fill="currentColor"/>
+                <circle cx="64" cy="32" r="2" fill="currentColor"/>
+                <circle cx="36" cy="42" r="2" fill="currentColor"/>
+                <circle cx="50" cy="42" r="2" fill="currentColor"/>
+                <circle cx="64" cy="42" r="2" fill="currentColor"/>
+              </svg>
+            </div>
             <div>
               <div class="service-card-top">
                 <div class="service-icon-wrap">📅</div>
@@ -503,7 +551,18 @@
           </div>
 
           <!-- 05 Digital & QR Menus -->
-          <div class="service-card">
+          <div class="service-card" data-cursor="EXPLORE">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <rect x="28" y="8" width="44" height="44" rx="4" stroke="currentColor" stroke-width="1.2"/>
+                <rect x="34" y="14" width="10" height="10" fill="currentColor" opacity="0.85"/>
+                <rect x="56" y="14" width="10" height="10" fill="currentColor" opacity="0.85"/>
+                <rect x="34" y="36" width="10" height="10" fill="currentColor" opacity="0.85"/>
+                <rect x="56" y="36" width="8" height="8" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M48 20 H52 M48 30 H52 M48 40 H52" stroke="currentColor" stroke-width="1.2"/>
+              </svg>
+            </div>
             <div>
               <div class="service-card-top">
                 <div class="service-icon-wrap">📱</div>
@@ -522,7 +581,17 @@
           </div>
 
           <!-- 06 Online Forms & Applications -->
-          <div class="service-card">
+          <div class="service-card" data-cursor="EXPLORE">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <rect x="24" y="9" width="52" height="44" rx="4" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M36 21 H64 M36 29 H56 M36 37 H60" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <circle cx="31" cy="21" r="1.5" fill="currentColor"/>
+                <circle cx="31" cy="29" r="1.5" fill="currentColor"/>
+                <circle cx="31" cy="37" r="1.5" fill="currentColor"/>
+              </svg>
+            </div>
             <div>
               <div class="service-card-top">
                 <div class="service-icon-wrap">📋</div>
@@ -541,7 +610,16 @@
           </div>
 
           <!-- 07 E-Ticket Booking Assistance -->
-          <div class="service-card">
+          <div class="service-card" data-cursor="EXPLORE">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <path d="M16 15 H84 V45 H16 Z" stroke="currentColor" stroke-width="1.2" rx="4"/>
+                <path d="M38 15 V45" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3"/>
+                <circle cx="60" cy="30" r="7" stroke="currentColor" stroke-width="1"/>
+                <path d="M57 30 H63 M60 27 V33" stroke="currentColor" stroke-width="1"/>
+              </svg>
+            </div>
             <div>
               <div class="service-card-top">
                 <div class="service-icon-wrap">🎫</div>
@@ -560,9 +638,18 @@
           </div>
 
           <!-- 08 WhatsApp Integration -->
-          <div class="service-card"
+          <div class="service-card" data-cursor="EXPLORE"
             onclick="window.open('https://wa.me/918982820353?text=Hi%20Verity%20Flux%2C%20I%20am%20interested%20in%20WhatsApp%20Integration%20for%20my%20business', '_blank')"
             style="cursor: pointer;" title="WhatsApp Integration">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <path d="M26 44 L32 36 C29 32 29 26 34 21 C40 16 49 16 55 20 C61 24 62 33 57 39 C52 44 43 45 38 42 Z" stroke="currentColor" stroke-width="1.2"/>
+                <circle cx="41" cy="29" r="2" fill="currentColor"/>
+                <circle cx="49" cy="29" r="2" fill="currentColor"/>
+                <path d="M60 22 C67 25 69 33 65 39" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
+              </svg>
+            </div>
             <div>
               <div class="service-card-top">
                 <div class="service-icon-wrap">💬</div>
@@ -582,7 +669,15 @@
           </div>
 
           <!-- 09 Domain & Business Email -->
-          <div class="service-card">
+          <div class="service-card" data-cursor="EXPLORE">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <rect x="18" y="14" width="64" height="34" rx="4" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M18 18 L50 35 L82 18" stroke="currentColor" stroke-width="1.2"/>
+                <circle cx="50" cy="40" r="3" stroke="currentColor" stroke-width="1"/>
+              </svg>
+            </div>
             <div>
               <div class="service-card-top">
                 <div class="service-icon-wrap">✉️</div>
@@ -601,7 +696,16 @@
           </div>
 
           <!-- 10 Google Business Setup Assistance -->
-          <div class="service-card">
+          <div class="service-card" data-cursor="EXPLORE">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <circle cx="50" cy="25" r="11" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M50 36 L50 47" stroke="currentColor" stroke-width="1.4"/>
+                <circle cx="50" cy="25" r="3.5" fill="currentColor"/>
+                <ellipse cx="50" cy="48" rx="16" ry="5" stroke="currentColor" stroke-width="1" stroke-dasharray="3 2"/>
+              </svg>
+            </div>
             <div>
               <div class="service-card-top">
                 <div class="service-icon-wrap">📍</div>
@@ -620,7 +724,15 @@
           </div>
 
           <!-- 11 Website Maintenance -->
-          <div class="service-card">
+          <div class="service-card" data-cursor="EXPLORE">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <circle cx="50" cy="30" r="17" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3"/>
+                <path d="M50 13 V19 M50 41 V47 M33 30 H39 M61 30 H67" stroke="currentColor" stroke-width="2"/>
+                <circle cx="50" cy="30" r="6" stroke="currentColor" stroke-width="1.2"/>
+              </svg>
+            </div>
             <div>
               <div class="service-card-top">
                 <div class="service-icon-wrap">🛠️</div>
@@ -639,7 +751,15 @@
           </div>
 
           <!-- 12 Website Redesign -->
-          <div class="service-card">
+          <div class="service-card" data-cursor="EXPLORE">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <path d="M50 10 L54 24 L68 28 L54 32 L50 46 L46 32 L32 28 L46 24 Z" stroke="currentColor" stroke-width="1.2"/>
+                <circle cx="72" cy="44" r="3" fill="currentColor"/>
+                <path d="M26 40 L28 44 L32 46 L28 48 L26 52 L24 48 L20 46 L24 44 Z" stroke="currentColor" stroke-width="0.8"/>
+              </svg>
+            </div>
             <div>
               <div class="service-card-top">
                 <div class="service-icon-wrap">✨</div>
@@ -664,10 +784,11 @@
          Client Testimonials (Cafés & Restaurants)
          ========================================================================== -->
     <section class="testimonials-section section" id="testimonials">
+      <span class="section-watermark" aria-hidden="true">02</span>
       <div id="work" class="section-anchor-shim" aria-hidden="true"></div>
       <div class="container">
         <div class="section-header text-center">
-          <div class="section-label">CLIENT REVIEWS</div>
+          <div class="section-label"><span class="label-track">02</span> <span class="label-divider">/</span> CLIENT REVIEWS</div>
           <h2 class="section-heading">Trusted by cafés &amp; restaurants that value real results.</h2>
           <p class="section-subheading">
             Independent café owners and restaurateurs share how our websites, digital menus, and reservation workflows
@@ -677,7 +798,11 @@
 
         <div class="testimonials-grid">
           <!-- Testimonial 01: The Copper Kettle Café & Roastery -->
-          <div class="testimonial-card">
+          <div class="testimonial-card" data-cursor="VIEW">
+            <div class="case-study-chrome" aria-hidden="true">
+              <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
+              <span class="chrome-tag">VERIFIED IMPACT</span>
+            </div>
             <div class="testimonial-card-top">
               <div class="star-rating" aria-label="5 out of 5 stars">★★★★★</div>
               <span class="establishment-tag tag-cafe">☕ Café &amp; Roastery</span>
@@ -705,7 +830,11 @@
           </div>
 
           <!-- Testimonial 02: Olive & Basil Trattoria -->
-          <div class="testimonial-card">
+          <div class="testimonial-card" data-cursor="VIEW">
+            <div class="case-study-chrome" aria-hidden="true">
+              <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
+              <span class="chrome-tag">DIRECT WORKFLOW</span>
+            </div>
             <div class="testimonial-card-top">
               <div class="star-rating" aria-label="5 out of 5 stars">★★★★★</div>
               <span class="establishment-tag tag-restro">🍽 Woodfired Trattoria</span>
@@ -723,7 +852,7 @@
             </div>
 
             <div class="testimonial-author-row">
-              <div class="author-avatar avatar-mint">AD</div>
+              <div class="author-avatar avatar-bronze">AD</div>
               <div class="author-meta">
                 <div class="author-name">Ananya Deshmukh</div>
                 <div class="author-role">Owner &amp; Executive Chef</div>
@@ -733,7 +862,11 @@
           </div>
 
           <!-- Testimonial 03: Spice Route Coastal Bistro -->
-          <div class="testimonial-card">
+          <div class="testimonial-card" data-cursor="VIEW">
+            <div class="case-study-chrome" aria-hidden="true">
+              <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
+              <span class="chrome-tag">HIGH VELOCITY</span>
+            </div>
             <div class="testimonial-card-top">
               <div class="star-rating" aria-label="5 out of 5 stars">★★★★★</div>
               <span class="establishment-tag tag-bistro">🍷 Coastal Bistro &amp; Bar</span>
@@ -751,7 +884,7 @@
             </div>
 
             <div class="testimonial-author-row">
-              <div class="author-avatar avatar-blue">VR</div>
+              <div class="author-avatar avatar-espresso">VR</div>
               <div class="author-meta">
                 <div class="author-name">Chef Vikramaditya Rathore</div>
                 <div class="author-role">Managing Partner &amp; Culinary Director</div>
@@ -761,7 +894,11 @@
           </div>
 
           <!-- Testimonial 04: The Daily Grind & Bakehouse -->
-          <div class="testimonial-card">
+          <div class="testimonial-card" data-cursor="VIEW">
+            <div class="case-study-chrome" aria-hidden="true">
+              <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
+              <span class="chrome-tag">TURNKEY SETUP</span>
+            </div>
             <div class="testimonial-card-top">
               <div class="star-rating" aria-label="5 out of 5 stars">★★★★★</div>
               <span class="establishment-tag tag-bakery">🥐 Specialty Bakehouse</span>
@@ -779,7 +916,7 @@
             </div>
 
             <div class="testimonial-author-row">
-              <div class="author-avatar avatar-purple">MT</div>
+              <div class="author-avatar avatar-crema">MT</div>
               <div class="author-meta">
                 <div class="author-name">Meera Sen &amp; Tanmay Roy</div>
                 <div class="author-role">Co-Founders &amp; Bakers</div>
@@ -795,9 +932,10 @@
          Why Choose Verity Flux
          ========================================================================== -->
     <section class="why-section section" id="why">
+      <span class="section-watermark" aria-hidden="true">03</span>
       <div class="container">
         <div class="section-header text-center">
-          <div class="section-label">WHY VERITY FLUX</div>
+          <div class="section-label"><span class="label-track">03</span> <span class="label-divider">/</span> THE VERITY STANDARD</div>
           <h2 class="section-heading">More than a website. A better digital presence.</h2>
           <p class="section-subheading">
             We don't just write code; we align every screen, interaction, and workflow with your real-world customer
@@ -807,8 +945,12 @@
 
         <div class="why-grid">
           <!-- Card 1 -->
-          <div class="why-card">
-            <div class="why-icon">🎯</div>
+          <div class="why-card" data-cursor="EXPLORE">
+            <div class="why-card-shimmer" aria-hidden="true"></div>
+            <div class="why-card-top">
+              <div class="why-icon">🎯</div>
+              <span class="why-card-num">01</span>
+            </div>
             <h3 class="why-title">Business First</h3>
             <p class="why-desc">
               Every website is designed around your target customers and business goals—driving inquiries, orders, and
@@ -817,8 +959,12 @@
           </div>
 
           <!-- Card 2 -->
-          <div class="why-card">
-            <div class="why-icon">📱</div>
+          <div class="why-card" data-cursor="EXPLORE">
+            <div class="why-card-shimmer" aria-hidden="true"></div>
+            <div class="why-card-top">
+              <div class="why-icon">📱</div>
+              <span class="why-card-num">02</span>
+            </div>
             <h3 class="why-title">Mobile First</h3>
             <p class="why-desc">
               Engineered to look outstanding and load rapidly on smartphones, tablets, and wide desktop screens alike.
@@ -826,8 +972,12 @@
           </div>
 
           <!-- Card 3 -->
-          <div class="why-card">
-            <div class="why-icon">💎</div>
+          <div class="why-card" data-cursor="EXPLORE">
+            <div class="why-card-shimmer" aria-hidden="true"></div>
+            <div class="why-card-top">
+              <div class="why-icon">💎</div>
+              <span class="why-card-num">03</span>
+            </div>
             <h3 class="why-title">Modern Design</h3>
             <p class="why-desc">
               Clean, contemporary dark interfaces and elegant typography that make your business stand out from
@@ -836,8 +986,12 @@
           </div>
 
           <!-- Card 4 -->
-          <div class="why-card">
-            <div class="why-icon">⚡</div>
+          <div class="why-card" data-cursor="EXPLORE">
+            <div class="why-card-shimmer" aria-hidden="true"></div>
+            <div class="why-card-top">
+              <div class="why-icon">⚡</div>
+              <span class="why-card-num">04</span>
+            </div>
             <h3 class="why-title">Conversion Focused</h3>
             <p class="why-desc">
               Clear, strategic calls-to-action that encourage visitors to contact, book tables, request quotes, or
@@ -846,8 +1000,12 @@
           </div>
 
           <!-- Card 5 -->
-          <div class="why-card">
-            <div class="why-icon">🔑</div>
+          <div class="why-card" data-cursor="EXPLORE">
+            <div class="why-card-shimmer" aria-hidden="true"></div>
+            <div class="why-card-top">
+              <div class="why-icon">🔑</div>
+              <span class="why-card-num">05</span>
+            </div>
             <h3 class="why-title">Easy Handover</h3>
             <p class="why-desc">
               Complete client ownership with straightforward access, documentation, and credentials provided after
@@ -856,8 +1014,12 @@
           </div>
 
           <!-- Card 6 -->
-          <div class="why-card">
-            <div class="why-icon">🤝</div>
+          <div class="why-card" data-cursor="EXPLORE">
+            <div class="why-card-shimmer" aria-hidden="true"></div>
+            <div class="why-card-top">
+              <div class="why-icon">🤝</div>
+              <span class="why-card-num">06</span>
+            </div>
             <h3 class="why-title">Flexible Support</h3>
             <p class="why-desc">
               Optional ongoing maintenance, content updates, and technical assistance whenever your business evolves.
@@ -871,19 +1033,28 @@
          Our Process Timeline (4 Steps)
          ========================================================================== -->
     <section class="process-section section" id="process">
+      <span class="section-watermark" aria-hidden="true">04</span>
       <div class="container">
         <div class="section-header">
-          <div class="section-label">OUR PROCESS</div>
+          <div class="section-label"><span class="label-track">04</span> <span class="label-divider">/</span> OUR PROCESS</div>
           <h2 class="section-heading">Simple process. Serious results.</h2>
           <p class="section-subheading">
             A clear, collaborative 4-step workflow from the first conversation to a live, polished website.
           </p>
         </div>
 
-        <div class="process-timeline">
+        <div class="process-timeline" id="processTimeline">
+          <!-- Dynamic Scroll-Fill Connecting Progress Line -->
+          <div class="process-progress-line" id="processProgressLine" aria-hidden="true">
+            <div class="process-progress-fill" id="processProgressFill"></div>
+          </div>
+
           <!-- Step 1 -->
-          <div class="process-step">
-            <div class="process-node">01</div>
+          <div class="process-step is-active" data-step="1">
+            <div class="process-node">
+              <span class="node-num">01</span>
+              <span class="node-pulse" aria-hidden="true"></span>
+            </div>
             <h3 class="process-step-title">Discover</h3>
             <p class="process-step-desc">
               Understand the business, audience, goals, brand voice, and technical requirements to create a focused
@@ -892,8 +1063,11 @@
           </div>
 
           <!-- Step 2 -->
-          <div class="process-step">
-            <div class="process-node">02</div>
+          <div class="process-step" data-step="2">
+            <div class="process-node">
+              <span class="node-num">02</span>
+              <span class="node-pulse" aria-hidden="true"></span>
+            </div>
             <h3 class="process-step-title">Design</h3>
             <p class="process-step-desc">
               Plan the structure, content wireframes, color palette, and visual direction tailored to appeal to your
@@ -902,8 +1076,11 @@
           </div>
 
           <!-- Step 3 -->
-          <div class="process-step">
-            <div class="process-node">03</div>
+          <div class="process-step" data-step="3">
+            <div class="process-node">
+              <span class="node-num">03</span>
+              <span class="node-pulse" aria-hidden="true"></span>
+            </div>
             <h3 class="process-step-title">Build</h3>
             <p class="process-step-desc">
               Develop a fast, responsive, mobile-optimized website with integrated forms, booking hooks, and WhatsApp
@@ -912,8 +1089,11 @@
           </div>
 
           <!-- Step 4 -->
-          <div class="process-step">
-            <div class="process-node">04</div>
+          <div class="process-step" data-step="4">
+            <div class="process-node">
+              <span class="node-num">04</span>
+              <span class="node-pulse" aria-hidden="true"></span>
+            </div>
             <h3 class="process-step-title">Launch</h3>
             <p class="process-step-desc">
               Conduct quality assurance, connect your custom domain, optimize SEO metadata, deploy, and hand over the
@@ -928,6 +1108,7 @@
          About Verity Flux (Split Screen Redesign)
          ========================================================================== -->
     <section class="about-section section" id="about">
+      <span class="section-watermark" aria-hidden="true">05</span>
       <div class="container about-grid">
         <!-- Visual Column: Studio Architecture Showcase -->
         <div class="about-showcase-card">
@@ -1007,7 +1188,7 @@
 
         <!-- Story Column -->
         <div>
-          <div class="section-label">ABOUT VERITY FLUX</div>
+          <div class="section-label"><span class="label-track">05</span> <span class="label-divider">/</span> ABOUT VERITY FLUX</div>
           <h2 class="section-heading">Digital solutions for businesses ready to be taken seriously online.</h2>
           <p class="about-text">
             Verity Flux is a modern web development and digital services studio focused on helping businesses establish
@@ -1068,8 +1249,8 @@
           </div>
 
           <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
-            <a href="#contact" class="btn btn-primary">Work with Verity Flux</a>
-            <a href="#testimonials" class="btn btn-secondary">Read Client Reviews →</a>
+            <a href="#contact" class="btn btn-primary" data-cursor="START">Work with Verity Flux</a>
+            <a href="#testimonials" class="btn btn-secondary" data-cursor="VIEW">Read Client Reviews →</a>
           </div>
         </div>
       </div>
@@ -1079,9 +1260,10 @@
          Industries Section (Who We Work With)
          ========================================================================== -->
     <section class="industries-section section">
+      <span class="section-watermark" aria-hidden="true">06</span>
       <div class="container">
         <div class="section-header text-center">
-          <div class="section-label">INDUSTRIES</div>
+          <div class="section-label"><span class="label-track">06</span> <span class="label-divider">/</span> WHO WE WORK WITH</div>
           <h2 class="section-heading">Who We Work With</h2>
           <p class="section-subheading">
             Tailored digital interfaces built around the distinct sales and enquiry habits of varied business sectors.
@@ -1089,43 +1271,43 @@
         </div>
 
         <div class="industries-grid">
-          <div class="industry-card">
+          <div class="industry-card" data-cursor="EXPLORE">
             <span class="industry-icon">☕</span>
             <span class="industry-name">Cafés</span>
           </div>
-          <div class="industry-card">
+          <div class="industry-card" data-cursor="EXPLORE">
             <span class="industry-icon">🍽</span>
             <span class="industry-name">Restaurants</span>
           </div>
-          <div class="industry-card">
+          <div class="industry-card" data-cursor="EXPLORE">
             <span class="industry-icon">🏢</span>
             <span class="industry-name">Local Businesses</span>
           </div>
-          <div class="industry-card">
+          <div class="industry-card" data-cursor="EXPLORE">
             <span class="industry-icon">💼</span>
             <span class="industry-name">Professionals</span>
           </div>
-          <div class="industry-card">
+          <div class="industry-card" data-cursor="EXPLORE">
             <span class="industry-icon">💄</span>
             <span class="industry-name">Beauty &amp; Wellness</span>
           </div>
-          <div class="industry-card">
+          <div class="industry-card" data-cursor="EXPLORE">
             <span class="industry-icon">🏠</span>
             <span class="industry-name">Real Estate</span>
           </div>
-          <div class="industry-card">
+          <div class="industry-card" data-cursor="EXPLORE">
             <span class="industry-icon">🎓</span>
             <span class="industry-name">Education</span>
           </div>
-          <div class="industry-card">
+          <div class="industry-card" data-cursor="EXPLORE">
             <span class="industry-icon">✈</span>
             <span class="industry-name">Travel</span>
           </div>
-          <div class="industry-card">
+          <div class="industry-card" data-cursor="EXPLORE">
             <span class="industry-icon">🛍</span>
             <span class="industry-name">Small Brands</span>
           </div>
-          <div class="industry-card">
+          <div class="industry-card" data-cursor="EXPLORE">
             <span class="industry-icon">🚀</span>
             <span class="industry-name">Startups</span>
           </div>
@@ -1137,9 +1319,10 @@
          Digital Setup & Assistance Section
          ========================================================================== -->
     <section class="digital-services-section section">
+      <span class="section-watermark" aria-hidden="true">07</span>
       <div class="container">
         <div class="digital-services-box">
-          <div class="section-label">DIGITAL ASSISTANCE</div>
+          <div class="section-label"><span class="label-track">07</span> <span class="label-divider">/</span> DIGITAL ASSISTANCE</div>
           <h2 class="section-heading" style="margin-bottom: 0.75rem;">
             Need help getting your business online?
           </h2>
@@ -1219,7 +1402,7 @@
           </div>
 
           <div class="digital-disclaimer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#75A7FF" stroke-width="2"
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"
               style="flex-shrink: 0;">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="12" y1="16" x2="12" y2="12"></line>
@@ -1239,17 +1422,19 @@
          High-Impact CTA Section
          ========================================================================== -->
     <section class="cta-section">
+      <div class="cta-ambient-glow" aria-hidden="true"></div>
+      <div class="cta-halo-ring" aria-hidden="true"></div>
       <div class="container">
         <div class="cta-card">
-          <div class="section-label" style="justify-content: center;">READY TO UPGRADE?</div>
+          <div class="section-label" style="justify-content: center;"><span class="label-track">START</span> <span class="label-divider">/</span> READY TO UPGRADE?</div>
           <h2 class="cta-heading">Your business deserves a better first impression.</h2>
           <p class="cta-subheading">
             Tell us what you’re building. We’ll help turn it into a professional digital experience that attracts real
             customers.
           </p>
           <div class="cta-actions">
-            <a href="#contact" class="btn btn-primary">Start a Project</a>
-            <button class="btn btn-whatsapp" id="directWhatsAppBtn" title="WhatsApp Us">
+            <a href="#contact" class="btn btn-primary" data-cursor="START">Start a Project</a>
+            <button class="btn btn-whatsapp" id="directWhatsAppBtn" title="WhatsApp Us" data-cursor="START">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
@@ -1265,10 +1450,11 @@
          Contact Section & Project Enquiry Engine
          ========================================================================== -->
     <section class="contact-section section" id="contact">
+      <span class="section-watermark" aria-hidden="true">08</span>
       <div class="container contact-grid">
         <!-- Contact Info Column -->
         <div class="contact-info-col">
-          <div class="section-label">GET IN TOUCH</div>
+          <div class="section-label"><span class="label-track">08</span> <span class="label-divider">/</span> GET IN TOUCH</div>
           <h2 class="section-heading">Let’s build something that works.</h2>
           <p class="section-subheading">
             Fill out the form with your project details or message us directly on WhatsApp. We typically review
