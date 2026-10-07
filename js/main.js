@@ -119,7 +119,14 @@ function initNavigation() {
 
   // Highlight active section on scroll
   function updateActiveNav() {
-    const sections = document.querySelectorAll('section[id]');
+    if (window.location.hash && window.location.hash.startsWith('#service/')) {
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#services');
+      });
+      return;
+    }
+
+    const sections = document.querySelectorAll('#mainLandingContent section[id]');
     const scrollY = window.pageYOffset;
 
     sections.forEach(current => {
@@ -184,6 +191,24 @@ function initContactForm() {
 
   if (!form) return;
 
+  // Handle URL prefill if arriving from a Service Detail page (?service=Websites)
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service');
+    if (serviceParam) {
+      const serviceSelect = document.querySelector('#contactService');
+      if (serviceSelect) {
+        for (let i = 0; i < serviceSelect.options.length; i++) {
+          if (serviceSelect.options[i].text.toLowerCase().includes(serviceParam.toLowerCase()) ||
+              serviceSelect.options[i].value.toLowerCase().includes(serviceParam.toLowerCase())) {
+            serviceSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }
+  } catch (e) {}
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -194,7 +219,6 @@ function initContactForm() {
     const phone = form.querySelector('#contactPhone').value.trim();
     const businessType = form.querySelector('#contactBusinessType').value;
     const service = form.querySelector('#contactService').value;
-    const budget = form.querySelector('#contactBudget').value;
     const message = form.querySelector('#contactMessage').value.trim();
 
     if (!name || !email || !phone) {
@@ -236,7 +260,6 @@ function initContactForm() {
           phone,
           businessType,
           service,
-          budget,
           message
         })
       });
@@ -248,7 +271,7 @@ function initContactForm() {
         statusEl.innerHTML = `
           <strong>Enquiry Received!</strong> Thank you, <strong>${name}</strong>. We've logged your request and sent a confirmation receipt to <strong>${email}</strong>. A digital strategist from Verity Flux will review your brief for <em>${businessName || 'your project'}</em> and reach out within 24 hours.
           <div style="margin-top: 0.6rem;">
-            <a href="https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi Verity Flux, I just submitted a website enquiry for ${businessName || name} regarding ${service}. My budget is ${budget}.`)}" target="_blank" style="color: var(--gold); text-decoration: underline; font-weight: 600;">
+            <a href="https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi Verity Flux, I just submitted a website enquiry for ${businessName || name} regarding ${service}.`)}" target="_blank" style="color: var(--gold); text-decoration: underline; font-weight: 600;">
               Want a faster response? Click here to chat with us on WhatsApp →
             </a>
           </div>

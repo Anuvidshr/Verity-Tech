@@ -40,8 +40,12 @@
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@400..800&display=swap"
     rel="stylesheet">
 
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=2.2">
 
   <!-- Instant Theme Initializer (Prevents Flash, Defaults to Light) -->
   <script>
@@ -171,7 +175,10 @@
     </div>
   </aside>
 
-  <main>
+  <!-- Dynamic Service Detail Page View (Rendered by JavaScript) -->
+  <div id="serviceDetailPage" class="service-detail-page-view" style="display: none;" aria-live="polite"></div>
+
+  <main id="mainLandingContent">
     <!-- ==========================================================================
          Hero Section
          ========================================================================== -->
@@ -393,27 +400,6 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         Trust / Credibility Strip
-         ========================================================================== -->
-    <section class="trust-strip">
-      <div class="container trust-content">
-        <div class="trust-title">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.2">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-          </svg>
-          <span>Built for businesses that want to grow online:</span>
-        </div>
-        <div class="trust-categories">
-          <span class="trust-badge">☕ Cafés</span>
-          <span class="trust-badge">🍽 Restaurants</span>
-          <span class="trust-badge">🏢 Local Businesses</span>
-          <span class="trust-badge">💼 Professionals</span>
-          <span class="trust-badge">🚀 Startups</span>
-          <span class="trust-badge">🎨 Creators</span>
-        </div>
-      </div>
-    </section>
 
     <!-- ==========================================================================
          Services Section (12 Services)
@@ -431,8 +417,8 @@
         </div>
 
         <div class="services-grid">
-          <!-- 01 Business Websites -->
-          <div class="service-card" data-cursor="EXPLORE">
+          <!-- 01 Websites -->
+          <a href="#service/websites" class="service-card" data-cursor="EXPLORE" title="Websites - View Details">
             <div class="service-card-shimmer" aria-hidden="true"></div>
             <div class="service-abstract-visual" aria-hidden="true">
               <svg viewBox="0 0 100 60" fill="none">
@@ -450,48 +436,19 @@
                 <div class="service-icon-wrap">🌐</div>
                 <span class="service-num">01</span>
               </div>
-              <h3 class="service-title">Business Websites</h3>
+              <h3 class="service-title">Websites</h3>
               <p class="service-desc">
-                Professional websites for local businesses, cafés, restaurants, professionals and growing brands that
-                establish authority and trust.
+                Professional websites that make businesses look credible, explain what they offer, and help customers take the next step.
               </p>
             </div>
             <div class="service-card-bottom">
-              <span class="service-tag">Core Foundation</span>
+              <span class="service-cta-text">Build Your Presence</span>
               <span class="service-arrow">→</span>
             </div>
-          </div>
+          </a>
 
-          <!-- 02 Restaurant & Café Websites -->
-          <div class="service-card" data-cursor="EXPLORE">
-            <div class="service-card-shimmer" aria-hidden="true"></div>
-            <div class="service-abstract-visual" aria-hidden="true">
-              <svg viewBox="0 0 100 60" fill="none">
-                <circle cx="50" cy="30" r="22" stroke="currentColor" stroke-width="1.2"/>
-                <circle cx="50" cy="30" r="14" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"/>
-                <path d="M50 6 V12 M50 48 V54 M26 30 H32 M68 30 H74" stroke="currentColor" stroke-width="1.2"/>
-                <circle cx="50" cy="30" r="3" fill="currentColor"/>
-              </svg>
-            </div>
-            <div>
-              <div class="service-card-top">
-                <div class="service-icon-wrap">🍽</div>
-                <span class="service-num">02</span>
-              </div>
-              <h3 class="service-title">Restaurant &amp; Café Websites</h3>
-              <p class="service-desc">
-                Menus, galleries, locations, reservations, reviews, WhatsApp integration and direct customer enquiry
-                features without aggregator fees.
-              </p>
-            </div>
-            <div class="service-card-bottom">
-              <span class="service-tag">Hospitality</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </div>
-
-          <!-- 03 Landing Pages -->
-          <div class="service-card" data-cursor="EXPLORE">
+          <!-- 02 Landing Pages -->
+          <a href="#service/landing-pages" class="service-card" data-cursor="EXPLORE" title="Landing Pages - View Details">
             <div class="service-card-shimmer" aria-hidden="true"></div>
             <div class="service-abstract-visual" aria-hidden="true">
               <svg viewBox="0 0 100 60" fill="none">
@@ -504,22 +461,21 @@
             <div>
               <div class="service-card-top">
                 <div class="service-icon-wrap">🎯</div>
-                <span class="service-num">03</span>
+                <span class="service-num">02</span>
               </div>
               <h3 class="service-title">Landing Pages</h3>
               <p class="service-desc">
-                High-converting landing pages tailored for products, services, campaigns, events, promotions, and
-                targeted ad conversions.
+                Focused pages designed to turn visitors into enquiries, bookings, sign-ups, or customers.
               </p>
             </div>
             <div class="service-card-bottom">
-              <span class="service-tag">Conversion</span>
+              <span class="service-cta-text">Turn Visits Into Leads</span>
               <span class="service-arrow">→</span>
             </div>
-          </div>
+          </a>
 
-          <!-- 04 Booking & Appointment Systems -->
-          <div class="service-card" data-cursor="EXPLORE">
+          <!-- 03 Online Booking -->
+          <a href="#service/online-booking" class="service-card" data-cursor="EXPLORE" title="Online Booking - View Details">
             <div class="service-card-shimmer" aria-hidden="true"></div>
             <div class="service-abstract-visual" aria-hidden="true">
               <svg viewBox="0 0 100 60" fill="none">
@@ -536,22 +492,102 @@
             <div>
               <div class="service-card-top">
                 <div class="service-icon-wrap">📅</div>
-                <span class="service-num">04</span>
+                <span class="service-num">03</span>
               </div>
-              <h3 class="service-title">Booking &amp; Appointment Systems</h3>
+              <h3 class="service-title">Online Booking</h3>
               <p class="service-desc">
-                Online appointment, reservation and enquiry systems that make it easy for customers to take action and
-                book slots directly.
+                Let customers book appointments, reserve services, or schedule a time without having to call or message.
               </p>
             </div>
             <div class="service-card-bottom">
-              <span class="service-tag">Automation</span>
+              <span class="service-cta-text">Make Booking Easy</span>
               <span class="service-arrow">→</span>
             </div>
-          </div>
+          </a>
 
-          <!-- 05 Digital & QR Menus -->
-          <div class="service-card" data-cursor="EXPLORE">
+          <!-- 04 Business Automation -->
+          <a href="#service/business-automation" class="service-card" data-cursor="EXPLORE" title="Business Automation - View Details">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <circle cx="30" cy="30" r="14" stroke="currentColor" stroke-width="1.2"/>
+                <circle cx="70" cy="30" r="14" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M44 30 H56" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/>
+                <circle cx="30" cy="30" r="4" fill="currentColor"/>
+                <circle cx="70" cy="30" r="4" fill="currentColor"/>
+                <path d="M50 20 L56 30 L50 40" stroke="currentColor" stroke-width="1.2" fill="none"/>
+              </svg>
+            </div>
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">⚡</div>
+                <span class="service-num">04</span>
+              </div>
+              <h3 class="service-title">Business Automation</h3>
+              <p class="service-desc">
+                Save time by automating repetitive tasks like enquiries, forms, notifications, registrations, and customer follow-ups.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-cta-text">Work Smarter</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 05 Custom Web Solutions -->
+          <a href="#service/custom-web-solutions" class="service-card" data-cursor="EXPLORE" title="Custom Web Solutions - View Details">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <rect x="18" y="12" width="64" height="38" rx="4" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M30 25 L24 31 L30 37 M70 25 L76 31 L70 37 M45 40 L55 22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">💻</div>
+                <span class="service-num">05</span>
+              </div>
+              <h3 class="service-title">Custom Web Solutions</h3>
+              <p class="service-desc">
+                Build custom tools and online systems around unique business processes that go beyond a standard website.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-cta-text">Build What You Need</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 06 WhatsApp Integration -->
+          <a href="#service/whatsapp-integration" class="service-card" data-cursor="EXPLORE" title="WhatsApp Integration - View Details">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <path d="M26 44 L32 36 C29 32 29 26 34 21 C40 16 49 16 55 20 C61 24 62 33 57 39 C52 44 43 45 38 42 Z" stroke="currentColor" stroke-width="1.2"/>
+                <circle cx="41" cy="29" r="2" fill="currentColor"/>
+                <circle cx="49" cy="29" r="2" fill="currentColor"/>
+                <path d="M60 22 C67 25 69 33 65 39" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
+              </svg>
+            </div>
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">💬</div>
+                <span class="service-num">06</span>
+              </div>
+              <h3 class="service-title">WhatsApp Integration</h3>
+              <p class="service-desc">
+                Give customers a direct way to contact the business, ask questions, make enquiries, and start conversations.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-cta-text">Connect With Customers</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 07 Digital Menus & QR -->
+          <a href="#service/digital-menus-qr" class="service-card" data-cursor="EXPLORE" title="Digital Menus & QR - View Details">
             <div class="service-card-shimmer" aria-hidden="true"></div>
             <div class="service-abstract-visual" aria-hidden="true">
               <svg viewBox="0 0 100 60" fill="none">
@@ -566,192 +602,48 @@
             <div>
               <div class="service-card-top">
                 <div class="service-icon-wrap">📱</div>
-                <span class="service-num">05</span>
-              </div>
-              <h3 class="service-title">Digital &amp; QR Menus</h3>
-              <p class="service-desc">
-                Mobile-friendly digital menus that customers can access instantly through QR codes without printing
-                costly paper menus.
-              </p>
-            </div>
-            <div class="service-card-bottom">
-              <span class="service-tag">Contactless</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </div>
-
-          <!-- 06 Online Forms & Applications -->
-          <div class="service-card" data-cursor="EXPLORE">
-            <div class="service-card-shimmer" aria-hidden="true"></div>
-            <div class="service-abstract-visual" aria-hidden="true">
-              <svg viewBox="0 0 100 60" fill="none">
-                <rect x="24" y="9" width="52" height="44" rx="4" stroke="currentColor" stroke-width="1.2"/>
-                <path d="M36 21 H64 M36 29 H56 M36 37 H60" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-                <circle cx="31" cy="21" r="1.5" fill="currentColor"/>
-                <circle cx="31" cy="29" r="1.5" fill="currentColor"/>
-                <circle cx="31" cy="37" r="1.5" fill="currentColor"/>
-              </svg>
-            </div>
-            <div>
-              <div class="service-card-top">
-                <div class="service-icon-wrap">📋</div>
-                <span class="service-num">06</span>
-              </div>
-              <h3 class="service-title">Online Forms &amp; Applications</h3>
-              <p class="service-desc">
-                Digital forms for enquiries, registrations, candidate applications, custom surveys, and business client
-                onboarding workflows.
-              </p>
-            </div>
-            <div class="service-card-bottom">
-              <span class="service-tag">Operations</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </div>
-
-          <!-- 07 E-Ticket Booking Assistance -->
-          <div class="service-card" data-cursor="EXPLORE">
-            <div class="service-card-shimmer" aria-hidden="true"></div>
-            <div class="service-abstract-visual" aria-hidden="true">
-              <svg viewBox="0 0 100 60" fill="none">
-                <path d="M16 15 H84 V45 H16 Z" stroke="currentColor" stroke-width="1.2" rx="4"/>
-                <path d="M38 15 V45" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3"/>
-                <circle cx="60" cy="30" r="7" stroke="currentColor" stroke-width="1"/>
-                <path d="M57 30 H63 M60 27 V33" stroke="currentColor" stroke-width="1"/>
-              </svg>
-            </div>
-            <div>
-              <div class="service-card-top">
-                <div class="service-icon-wrap">🎫</div>
                 <span class="service-num">07</span>
               </div>
-              <h3 class="service-title">E-Ticket Booking Assistance</h3>
+              <h3 class="service-title">Digital Menus &amp; QR</h3>
               <p class="service-desc">
-                Customer-side digital assistance and guided setup with online ticket booking and e-ticket processes
-                through official platforms.
+                Give customers instant access to menus, services, offers, or information through a simple QR code.
               </p>
             </div>
             <div class="service-card-bottom">
-              <span class="service-tag">Assistance</span>
+              <span class="service-cta-text">Go Digital</span>
               <span class="service-arrow">→</span>
             </div>
-          </div>
+          </a>
 
-          <!-- 08 WhatsApp Integration -->
-          <div class="service-card" data-cursor="EXPLORE"
-            onclick="window.open('https://wa.me/918982820353?text=Hi%20Verity%20Flux%2C%20I%20am%20interested%20in%20WhatsApp%20Integration%20for%20my%20business', '_blank')"
-            style="cursor: pointer;" title="WhatsApp Integration">
+          <!-- 08 UI/UX Design -->
+          <a href="#service/ui-ux-design" class="service-card" data-cursor="EXPLORE" title="UI/UX Design - View Details">
             <div class="service-card-shimmer" aria-hidden="true"></div>
             <div class="service-abstract-visual" aria-hidden="true">
               <svg viewBox="0 0 100 60" fill="none">
-                <path d="M26 44 L32 36 C29 32 29 26 34 21 C40 16 49 16 55 20 C61 24 62 33 57 39 C52 44 43 45 38 42 Z" stroke="currentColor" stroke-width="1.2"/>
-                <circle cx="41" cy="29" r="2" fill="currentColor"/>
-                <circle cx="49" cy="29" r="2" fill="currentColor"/>
-                <path d="M60 22 C67 25 69 33 65 39" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
+                <rect x="22" y="12" width="56" height="36" rx="4" stroke="currentColor" stroke-width="1.2"/>
+                <circle cx="34" cy="24" r="5" stroke="currentColor" stroke-width="1"/>
+                <path d="M46 22 H68 M46 26 H60" stroke="currentColor" stroke-width="1.2"/>
+                <rect x="30" y="34" width="40" height="8" rx="2" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
               </svg>
             </div>
             <div>
               <div class="service-card-top">
-                <div class="service-icon-wrap">💬</div>
+                <div class="service-icon-wrap">🎨</div>
                 <span class="service-num">08</span>
               </div>
-              <h3 class="service-title">WhatsApp Integration</h3>
+              <h3 class="service-title">UI/UX Design</h3>
               <p class="service-desc">
-                Connect websites with WhatsApp for direct enquiries, instant bookings, customer communication, and
-                automated lead routing.
+                Make websites easier to understand, easier to use, and more enjoyable for customers.
               </p>
             </div>
             <div class="service-card-bottom">
-              <a href="https://wa.me/918982820353?text=Hi%20Verity%20Flux%2C%20I%20am%20interested%20in%20WhatsApp%20Integration%20for%20my%20business"
-                target="_blank" class="service-tag" style="text-decoration: none; color: inherit;">Direct Comms</a>
+              <span class="service-cta-text">Improve The Experience</span>
               <span class="service-arrow">→</span>
             </div>
-          </div>
+          </a>
 
-          <!-- 09 Domain & Business Email -->
-          <div class="service-card" data-cursor="EXPLORE">
-            <div class="service-card-shimmer" aria-hidden="true"></div>
-            <div class="service-abstract-visual" aria-hidden="true">
-              <svg viewBox="0 0 100 60" fill="none">
-                <rect x="18" y="14" width="64" height="34" rx="4" stroke="currentColor" stroke-width="1.2"/>
-                <path d="M18 18 L50 35 L82 18" stroke="currentColor" stroke-width="1.2"/>
-                <circle cx="50" cy="40" r="3" stroke="currentColor" stroke-width="1"/>
-              </svg>
-            </div>
-            <div>
-              <div class="service-card-top">
-                <div class="service-icon-wrap">✉️</div>
-                <span class="service-num">09</span>
-              </div>
-              <h3 class="service-title">Domain &amp; Business Email</h3>
-              <p class="service-desc">
-                Professional custom domain setup (yourname.in / .com) and business email configuration (Google Workspace
-                / Zoho Mail).
-              </p>
-            </div>
-            <div class="service-card-bottom">
-              <span class="service-tag">Credibility</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </div>
-
-          <!-- 10 Google Business Setup Assistance -->
-          <div class="service-card" data-cursor="EXPLORE">
-            <div class="service-card-shimmer" aria-hidden="true"></div>
-            <div class="service-abstract-visual" aria-hidden="true">
-              <svg viewBox="0 0 100 60" fill="none">
-                <circle cx="50" cy="25" r="11" stroke="currentColor" stroke-width="1.2"/>
-                <path d="M50 36 L50 47" stroke="currentColor" stroke-width="1.4"/>
-                <circle cx="50" cy="25" r="3.5" fill="currentColor"/>
-                <ellipse cx="50" cy="48" rx="16" ry="5" stroke="currentColor" stroke-width="1" stroke-dasharray="3 2"/>
-              </svg>
-            </div>
-            <div>
-              <div class="service-card-top">
-                <div class="service-icon-wrap">📍</div>
-                <span class="service-num">10</span>
-              </div>
-              <h3 class="service-title">Google Business Setup Assistance</h3>
-              <p class="service-desc">
-                Help local businesses establish and optimize their Google Business Profile, Google Maps pins, and local
-                search visibility.
-              </p>
-            </div>
-            <div class="service-card-bottom">
-              <span class="service-tag">Local SEO</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </div>
-
-          <!-- 11 Website Maintenance -->
-          <div class="service-card" data-cursor="EXPLORE">
-            <div class="service-card-shimmer" aria-hidden="true"></div>
-            <div class="service-abstract-visual" aria-hidden="true">
-              <svg viewBox="0 0 100 60" fill="none">
-                <circle cx="50" cy="30" r="17" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3"/>
-                <path d="M50 13 V19 M50 41 V47 M33 30 H39 M61 30 H67" stroke="currentColor" stroke-width="2"/>
-                <circle cx="50" cy="30" r="6" stroke="currentColor" stroke-width="1.2"/>
-              </svg>
-            </div>
-            <div>
-              <div class="service-card-top">
-                <div class="service-icon-wrap">🛠️</div>
-                <span class="service-num">11</span>
-              </div>
-              <h3 class="service-title">Website Maintenance</h3>
-              <p class="service-desc">
-                Content updates, performance optimization, security fixes, uptime monitoring and ongoing website support
-                when you need it.
-              </p>
-            </div>
-            <div class="service-card-bottom">
-              <span class="service-tag">Ongoing Care</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </div>
-
-          <!-- 12 Website Redesign -->
-          <div class="service-card" data-cursor="EXPLORE">
+          <!-- 09 Website Redesign -->
+          <a href="#service/website-redesign" class="service-card" data-cursor="EXPLORE" title="Website Redesign - View Details">
             <div class="service-card-shimmer" aria-hidden="true"></div>
             <div class="service-abstract-visual" aria-hidden="true">
               <svg viewBox="0 0 100 60" fill="none">
@@ -763,19 +655,97 @@
             <div>
               <div class="service-card-top">
                 <div class="service-icon-wrap">✨</div>
-                <span class="service-num">12</span>
+                <span class="service-num">09</span>
               </div>
               <h3 class="service-title">Website Redesign</h3>
               <p class="service-desc">
-                Modernize outdated, slow websites and overhaul their mobile experience, brand design, and customer
-                conversion flow.
+                Modernize outdated websites, improve the mobile experience, and create a better customer journey.
               </p>
             </div>
             <div class="service-card-bottom">
-              <span class="service-tag">Transformation</span>
+              <span class="service-cta-text">Upgrade Your Website</span>
               <span class="service-arrow">→</span>
             </div>
-          </div>
+          </a>
+
+          <!-- 10 Speed & Performance -->
+          <a href="#service/speed-performance" class="service-card" data-cursor="EXPLORE" title="Speed & Performance - View Details">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <path d="M22 42 A 32 32 0 1 1 78 42" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M50 34 L64 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="50" cy="34" r="3" fill="currentColor"/>
+                <path d="M28 42 H34 M66 42 H72" stroke="currentColor" stroke-width="1.2"/>
+              </svg>
+            </div>
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">🚀</div>
+                <span class="service-num">10</span>
+              </div>
+              <h3 class="service-title">Speed &amp; Performance</h3>
+              <p class="service-desc">
+                Optimize websites to load faster and perform better across devices.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-cta-text">Make It Faster</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 11 SEO & Visibility -->
+          <a href="#service/seo-visibility" class="service-card" data-cursor="EXPLORE" title="SEO & Visibility - View Details">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <circle cx="44" cy="28" r="16" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M56 40 L72 52" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M34 32 L40 24 L46 28 L54 18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="54" cy="18" r="2" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">🔍</div>
+                <span class="service-num">11</span>
+              </div>
+              <h3 class="service-title">SEO &amp; Visibility</h3>
+              <p class="service-desc">
+                Help businesses become easier to discover through search with essential SEO and local visibility improvements.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-cta-text">Get Found</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 12 Maintenance & Support -->
+          <a href="#service/maintenance-support" class="service-card" data-cursor="EXPLORE" title="Maintenance & Support - View Details">
+            <div class="service-card-shimmer" aria-hidden="true"></div>
+            <div class="service-abstract-visual" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none">
+                <path d="M50 12 L72 20 V34 C72 44 62 50 50 54 C38 50 28 44 28 34 V20 Z" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M42 32 L48 38 L60 26" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap">🛡️</div>
+                <span class="service-num">12</span>
+              </div>
+              <h3 class="service-title">Maintenance &amp; Support</h3>
+              <p class="service-desc">
+                Provide ongoing website updates, fixes, improvements, and technical support after launch.
+              </p>
+            </div>
+            <div class="service-card-bottom">
+              <span class="service-cta-text">Stay Up To Date</span>
+              <span class="service-arrow">→</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -797,7 +767,7 @@
         </div>
 
         <div class="testimonials-grid">
-          <!-- Testimonial 01: The Copper Kettle Café & Roastery -->
+          <!-- Testimonial 01 -->
           <div class="testimonial-card" data-cursor="VIEW">
             <div class="case-study-chrome" aria-hidden="true">
               <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
@@ -824,12 +794,11 @@
               <div class="author-meta">
                 <div class="author-name">Kabir Oberoi</div>
                 <div class="author-role">Founder &amp; Head Roaster</div>
-                <div class="author-company">The Copper Kettle Café &amp; Roastery • Mumbai</div>
               </div>
             </div>
           </div>
 
-          <!-- Testimonial 02: Olive & Basil Trattoria -->
+          <!-- Testimonial 02 -->
           <div class="testimonial-card" data-cursor="VIEW">
             <div class="case-study-chrome" aria-hidden="true">
               <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
@@ -842,8 +811,8 @@
 
             <p class="testimonial-body">
               “We were losing nearly 25% in commissions to delivery and dining apps just to secure reservations. Verity
-              Flux engineered an independent website for Olive &amp; Basil with a seamless direct table reservation
-              workflow. Over 60% of our weekend guests now book directly without middleman fees.”
+              Flux engineered an independent website with a seamless direct table reservation workflow. Over 60% of our
+              weekend guests now book directly without middleman fees.”
             </p>
 
             <div class="testimonial-highlight">
@@ -856,12 +825,11 @@
               <div class="author-meta">
                 <div class="author-name">Ananya Deshmukh</div>
                 <div class="author-role">Owner &amp; Executive Chef</div>
-                <div class="author-company">Olive &amp; Basil Trattoria • Bengaluru</div>
               </div>
             </div>
           </div>
 
-          <!-- Testimonial 03: Spice Route Coastal Bistro -->
+          <!-- Testimonial 03 -->
           <div class="testimonial-card" data-cursor="VIEW">
             <div class="case-study-chrome" aria-hidden="true">
               <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
@@ -888,12 +856,11 @@
               <div class="author-meta">
                 <div class="author-name">Chef Vikramaditya Rathore</div>
                 <div class="author-role">Managing Partner &amp; Culinary Director</div>
-                <div class="author-company">Spice Route Coastal Bistro • Goa</div>
               </div>
             </div>
           </div>
 
-          <!-- Testimonial 04: The Daily Grind & Bakehouse -->
+          <!-- Testimonial 04 -->
           <div class="testimonial-card" data-cursor="VIEW">
             <div class="case-study-chrome" aria-hidden="true">
               <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
@@ -920,7 +887,6 @@
               <div class="author-meta">
                 <div class="author-name">Meera Sen &amp; Tanmay Roy</div>
                 <div class="author-role">Co-Founders &amp; Bakers</div>
-                <div class="author-company">The Daily Grind &amp; Bakehouse • Kolkata</div>
               </div>
             </div>
           </div>
@@ -1105,153 +1071,71 @@
     </section>
 
     <!-- ==========================================================================
-         About Verity Flux (Split Screen Redesign)
+         About Verity Flux
          ========================================================================== -->
     <section class="about-section section" id="about">
       <span class="section-watermark" aria-hidden="true">05</span>
-      <div class="container about-grid">
-        <!-- Visual Column: Studio Architecture Showcase -->
-        <div class="about-showcase-card">
-          <div class="about-showcase-header">
-            <div class="about-showcase-tag">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                <polyline points="2 17 12 22 22 17"></polyline>
-                <polyline points="2 12 12 17 22 12"></polyline>
-              </svg>
-              <span>Studio Architecture</span>
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label"><span class="label-track">05</span> <span class="label-divider">/</span> ABOUT VERITY FLUX</div>
+          <h2 class="section-heading">Digital solutions for businesses ready to be taken seriously online.</h2>
+          <p class="section-subheading">
+            Verity Flux is a modern web development and digital services studio focused on helping businesses establish
+            a credible, high-converting online presence. From artisanal cafés and fine-dining restaurants to corporate
+            consulting firms and emerging brands, we engineer practical digital experiences designed around the exact way
+            modern customers explore, book, and buy.
+          </p>
+        </div>
+
+        <div class="about-pillars-grid">
+          <!-- Pillar 1 -->
+          <div class="about-pillar-card">
+            <div class="about-pillar-top">
+              <span class="about-pillar-icon">🌐</span>
+              <h3 class="about-pillar-title">Global Studio</h3>
             </div>
-            <div class="about-showcase-status">
-              <span class="live-dot"></span>
-              <span>Production Ready</span>
-            </div>
+            <p class="about-pillar-desc">
+              High-standard digital experiences built for local businesses and remote international clients alike.
+            </p>
           </div>
 
-          <!-- Abstract Wireframe & Multi-Device Canvas -->
-          <div class="about-craft-canvas">
-            <div
-              style="font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">
-              Responsive Viewport Engine
+          <!-- Pillar 2 -->
+          <div class="about-pillar-card">
+            <div class="about-pillar-top">
+              <span class="about-pillar-icon">📱</span>
+              <h3 class="about-pillar-title">Mobile First</h3>
             </div>
-            <div class="canvas-wireframe-grid">
-              <div class="wireframe-block">
-                <div class="wireframe-line accent"></div>
-                <div class="wireframe-line"></div>
-                <div class="wireframe-line" style="width: 80%;"></div>
-              </div>
-              <div class="wireframe-block">
-                <div class="wireframe-line secondary"></div>
-                <div class="wireframe-line"></div>
-                <div class="wireframe-line" style="width: 65%;"></div>
-              </div>
-            </div>
-            <div
-              style="display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: var(--text-secondary); padding-top: 0.5rem; border-top: 1px solid var(--border-subtle); flex-wrap: wrap; gap: 0.5rem;">
-              <span>📱 Mobile First</span>
-              <span>⚡ CWV Tuned</span>
-              <span>🔒 SSL Secure</span>
-            </div>
+            <p class="about-pillar-desc">
+              Over 70% of visits occur on phones. We optimize touch interactions, load speed, and instant navigation.
+            </p>
           </div>
 
-          <!-- Benchmark Badges (Honest metrics, no fake numbers) -->
-          <div class="about-metrics-row">
-            <div class="about-metric-pill">
-              <span class="about-metric-icon">🚀</span>
-              <div>
-                <div class="about-metric-val">99+</div>
-                <div class="about-metric-label">Performance Score</div>
-              </div>
+          <!-- Pillar 3 -->
+          <div class="about-pillar-card">
+            <div class="about-pillar-top">
+              <span class="about-pillar-icon">⚡</span>
+              <h3 class="about-pillar-title">Action Focused</h3>
             </div>
-            <div class="about-metric-pill">
-              <span class="about-metric-icon">💎</span>
-              <div>
-                <div class="about-metric-val">100%</div>
-                <div class="about-metric-label">Custom Architecture</div>
-              </div>
+            <p class="about-pillar-desc">
+              Seamless QR menus, online reservation hooks, and WhatsApp connections that turn visitors into paying patrons.
+            </p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="about-pillar-card">
+            <div class="about-pillar-top">
+              <span class="about-pillar-icon">🔑</span>
+              <h3 class="about-pillar-title">Full Ownership</h3>
             </div>
-            <div class="about-metric-pill">
-              <span class="about-metric-icon">⏱️</span>
-              <div>
-                <div class="about-metric-val">&lt; 24h</div>
-                <div class="about-metric-label">Response SLA</div>
-              </div>
-            </div>
-            <div class="about-metric-pill">
-              <span class="about-metric-icon">🔓</span>
-              <div>
-                <div class="about-metric-val">0%</div>
-                <div class="about-metric-label">Vendor Lock-In</div>
-              </div>
-            </div>
+            <p class="about-pillar-desc">
+              Complete client handover with full credentials, documentation, and zero restrictive dependencies.
+            </p>
           </div>
         </div>
 
-        <!-- Story Column -->
-        <div>
-          <div class="section-label"><span class="label-track">05</span> <span class="label-divider">/</span> ABOUT VERITY FLUX</div>
-          <h2 class="section-heading">Digital solutions for businesses ready to be taken seriously online.</h2>
-          <p class="about-text">
-            Verity Flux is a modern web development and digital services studio focused on helping businesses establish
-            a credible, high-converting online presence.
-          </p>
-          <p class="about-text">
-            From artisanal cafés and fine-dining restaurants to corporate consulting firms and emerging brands, we
-            engineer practical digital experiences designed around the exact way modern customers explore, book, and
-            buy.
-          </p>
-
-          <!-- 4 Feature Pillars (2x2 Grid) -->
-          <div class="about-pillars-grid">
-            <!-- Pillar 1 -->
-            <div class="about-pillar-card">
-              <div class="about-pillar-top">
-                <span class="about-pillar-icon">🌐</span>
-                <h3 class="about-pillar-title">Global Studio</h3>
-              </div>
-              <p class="about-pillar-desc">
-                High-standard digital experiences built for local businesses and remote international clients alike.
-              </p>
-            </div>
-
-            <!-- Pillar 2 -->
-            <div class="about-pillar-card">
-              <div class="about-pillar-top">
-                <span class="about-pillar-icon">📱</span>
-                <h3 class="about-pillar-title">Mobile First</h3>
-              </div>
-              <p class="about-pillar-desc">
-                Over 70% of visits occur on phones. We optimize touch interactions, load speed, and instant navigation.
-              </p>
-            </div>
-
-            <!-- Pillar 3 -->
-            <div class="about-pillar-card">
-              <div class="about-pillar-top">
-                <span class="about-pillar-icon">⚡</span>
-                <h3 class="about-pillar-title">Action Focused</h3>
-              </div>
-              <p class="about-pillar-desc">
-                Seamless QR menus, online reservation hooks, and WhatsApp connections that turn visitors into paying
-                patrons.
-              </p>
-            </div>
-
-            <!-- Pillar 4 -->
-            <div class="about-pillar-card">
-              <div class="about-pillar-top">
-                <span class="about-pillar-icon">🔑</span>
-                <h3 class="about-pillar-title">Full Ownership</h3>
-              </div>
-              <p class="about-pillar-desc">
-                Complete client handover with full credentials, documentation, and zero restrictive dependencies.
-              </p>
-            </div>
-          </div>
-
-          <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
-            <a href="#contact" class="btn btn-primary" data-cursor="START">Work with Verity Flux</a>
-            <a href="#testimonials" class="btn btn-secondary" data-cursor="VIEW">Read Client Reviews →</a>
-          </div>
+        <div class="about-actions" style="display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2.25rem;">
+          <a href="#contact" class="btn btn-primary" data-cursor="START">Work with Verity Flux</a>
+          <a href="#testimonials" class="btn btn-secondary" data-cursor="VIEW">Read Client Reviews →</a>
         </div>
       </div>
     </section>
@@ -1321,117 +1205,149 @@
     <section class="digital-services-section section">
       <span class="section-watermark" aria-hidden="true">07</span>
       <div class="container">
-        <div class="digital-services-box">
+        <div class="section-header text-center">
           <div class="section-label"><span class="label-track">07</span> <span class="label-divider">/</span> DIGITAL ASSISTANCE</div>
-          <h2 class="section-heading" style="margin-bottom: 0.75rem;">
-            Need help getting your business online?
-          </h2>
+          <h2 class="section-heading">Need help getting your business online?</h2>
           <p class="section-subheading">
-            Beyond standard website code, we handle the essential digital setups so you can launch smoothly without
+            Beyond standard website code, we handle essential digital setups so you can launch smoothly without
             technical confusion.
           </p>
+        </div>
 
-          <div class="digital-grid">
-            <div class="digital-item">
-              <span class="digital-item-icon">🌐</span>
-              <div>
-                <div class="digital-item-title">Domain Setup</div>
-                <div class="digital-item-desc">Assistance securing and configuring your custom .com / .in domain.</div>
-              </div>
+        <div class="digital-grid">
+          <!-- Card 01: Domain Setup -->
+          <div class="digital-card digital-item" data-cursor="EXPLORE">
+            <div class="digital-card-top">
+              <span class="digital-card-icon">🌐</span>
+              <span class="digital-card-num">01</span>
             </div>
-
-            <div class="digital-item">
-              <span class="digital-item-icon">✉️</span>
-              <div>
-                <div class="digital-item-title">Business Email</div>
-                <div class="digital-item-desc">Setting up professional mailboxes (e.g. contact@yourbrand.com).</div>
-              </div>
-            </div>
-
-            <div class="digital-item">
-              <span class="digital-item-icon">📍</span>
-              <div>
-                <div class="digital-item-title">Google Business Profile</div>
-                <div class="digital-item-desc">Assistance creating and optimizing your local Google Maps listing.</div>
-              </div>
-            </div>
-
-            <div class="digital-item">
-              <span class="digital-item-icon">📱</span>
-              <div>
-                <div class="digital-item-title">QR Menu Setup</div>
-                <div class="digital-item-desc">Generating durable high-res QR cards linking straight to mobile menus.
-                </div>
-              </div>
-            </div>
-
-            <div class="digital-item">
-              <span class="digital-item-icon">💬</span>
-              <div>
-                <div class="digital-item-title">WhatsApp Setup</div>
-                <div class="digital-item-desc">Configuring WhatsApp Business quick replies, catalog links &amp; web
-                  hooks.</div>
-              </div>
-            </div>
-
-            <div class="digital-item">
-              <span class="digital-item-icon">📝</span>
-              <div>
-                <div class="digital-item-title">Online Forms</div>
-                <div class="digital-item-desc">Digital intake sheets for customer inquiries, contracts and feedback.
-                </div>
-              </div>
-            </div>
-
-            <div class="digital-item">
-              <span class="digital-item-icon">📅</span>
-              <div>
-                <div class="digital-item-title">Booking Setup</div>
-                <div class="digital-item-desc">Connecting digital calendar slots to your phone notification feed.</div>
-              </div>
-            </div>
-
-            <div class="digital-item">
-              <span class="digital-item-icon">🎫</span>
-              <div>
-                <div class="digital-item-title">E-Ticket Assistance</div>
-                <div class="digital-item-desc">Guidance navigating official portals for digital event &amp; travel
-                  e-tickets.</div>
-              </div>
-            </div>
+            <h3 class="digital-card-title">Domain Setup</h3>
+            <p class="digital-card-desc">
+              Assistance securing and configuring your custom .com or .in domain with full DNS verification.
+            </p>
           </div>
 
-          <div class="digital-disclaimer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"
-              style="flex-shrink: 0;">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="16" x2="12" y2="12"></line>
-              <line x1="12" y1="8" x2="12.01" y2="8"></line>
-            </svg>
-            <span>
-              <strong>Service Scope Notice:</strong> Verity Flux provides private technical setup, design, and
-              onboarding assistance for business owners. We are an independent digital studio and do not claim to be an
-              official government agency, railway, airline, ticketing portal, or financial service provider.
-            </span>
+          <!-- Card 02: Business Email -->
+          <div class="digital-card digital-item" data-cursor="EXPLORE">
+            <div class="digital-card-top">
+              <span class="digital-card-icon">✉️</span>
+              <span class="digital-card-num">02</span>
+            </div>
+            <h3 class="digital-card-title">Business Email</h3>
+            <p class="digital-card-desc">
+              Setting up professional brand mailboxes (e.g. contact@yourbrand.com) on Google Workspace or Zoho.
+            </p>
           </div>
+
+          <!-- Card 03: Google Business Profile -->
+          <div class="digital-card digital-item" data-cursor="EXPLORE">
+            <div class="digital-card-top">
+              <span class="digital-card-icon">📍</span>
+              <span class="digital-card-num">03</span>
+            </div>
+            <h3 class="digital-card-title">Google Business Profile</h3>
+            <p class="digital-card-desc">
+              Assistance creating and optimizing your local Google Maps listing so nearby clients find you easily.
+            </p>
+          </div>
+
+          <!-- Card 04: QR Menu Setup -->
+          <div class="digital-card digital-item" data-cursor="EXPLORE">
+            <div class="digital-card-top">
+              <span class="digital-card-icon">📱</span>
+              <span class="digital-card-num">04</span>
+            </div>
+            <h3 class="digital-card-title">QR Menu Setup</h3>
+            <p class="digital-card-desc">
+              Generating durable high-res QR cards linking straight to mobile menus with zero reprint hassles.
+            </p>
+          </div>
+
+          <!-- Card 05: WhatsApp Setup -->
+          <div class="digital-card digital-item" data-cursor="EXPLORE">
+            <div class="digital-card-top">
+              <span class="digital-card-icon">💬</span>
+              <span class="digital-card-num">05</span>
+            </div>
+            <h3 class="digital-card-title">WhatsApp Setup</h3>
+            <p class="digital-card-desc">
+              Configuring WhatsApp Business quick replies, catalog links, and instant one-tap website hooks.
+            </p>
+          </div>
+
+          <!-- Card 06: Online Forms -->
+          <div class="digital-card digital-item" data-cursor="EXPLORE">
+            <div class="digital-card-top">
+              <span class="digital-card-icon">📝</span>
+              <span class="digital-card-num">06</span>
+            </div>
+            <h3 class="digital-card-title">Online Forms</h3>
+            <p class="digital-card-desc">
+              Digital intake sheets for customer inquiries, contracts, project onboarding, and client feedback.
+            </p>
+          </div>
+
+          <!-- Card 07: Booking Setup -->
+          <div class="digital-card digital-item" data-cursor="EXPLORE">
+            <div class="digital-card-top">
+              <span class="digital-card-icon">📅</span>
+              <span class="digital-card-num">07</span>
+            </div>
+            <h3 class="digital-card-title">Booking Setup</h3>
+            <p class="digital-card-desc">
+              Connecting digital calendar slots and reservation flows directly to your phone notification feed.
+            </p>
+          </div>
+
+          <!-- Card 08: E-Ticket Assistance -->
+          <div class="digital-card digital-item" data-cursor="EXPLORE">
+            <div class="digital-card-top">
+              <span class="digital-card-icon">🎫</span>
+              <span class="digital-card-num">08</span>
+            </div>
+            <h3 class="digital-card-title">E-Ticket Assistance</h3>
+            <p class="digital-card-desc">
+              Guidance navigating official portals and technical setups for digital event and travel e-tickets.
+            </p>
+          </div>
+        </div>
+
+        <div class="digital-disclaimer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"
+            style="flex-shrink: 0;">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span>
+            <strong>Service Scope Notice:</strong> Verity Flux provides private technical setup, design, and
+            onboarding assistance for business owners. We are an independent digital studio and do not claim to be an
+            official government agency, railway, airline, ticketing portal, or financial service provider.
+          </span>
         </div>
       </div>
     </section>
 
     <!-- ==========================================================================
-         High-Impact CTA Section
+         Parting Note & Creative Farewell
          ========================================================================== -->
     <section class="cta-section">
       <div class="cta-ambient-glow" aria-hidden="true"></div>
       <div class="cta-halo-ring" aria-hidden="true"></div>
       <div class="container">
         <div class="cta-card">
-          <div class="section-label" style="justify-content: center;"><span class="label-track">START</span> <span class="label-divider">/</span> READY TO UPGRADE?</div>
-          <h2 class="cta-heading">Your business deserves a better first impression.</h2>
+          <div class="section-label" style="justify-content: center;"><span class="label-track">PARTING WISHES</span> <span class="label-divider">/</span> A NOTE BEFORE YOU GO</div>
+          <h2 class="cta-heading">May whatever you build next be worth remembering.</h2>
           <p class="cta-subheading">
-            Tell us what you’re building. We’ll help turn it into a professional digital experience that attracts real
-            customers.
+            Building something of your own takes genuine heart, long hours, and quiet courage. Even if our paths don’t cross today, we wish your venture steady growth, loyal customers, and immense pride in every milestone you reach.
           </p>
+          <p class="cta-subheading-secondary">
+            And whenever you feel the time is right for a dedicated team that cares about your craft as deeply as you do — our table is always set, and the coffee is hot.
+          </p>
+          <div class="cta-signoff">
+            <span class="cta-signoff-sparkle">✦</span>
+            <span>With warmth, curiosity &amp; craft — from the Verity Flux studio</span>
+          </div>
           <div class="cta-actions">
             <a href="#contact" class="btn btn-primary" data-cursor="START">Start a Project</a>
             <button class="btn btn-whatsapp" id="directWhatsAppBtn" title="WhatsApp Us" data-cursor="START">
@@ -1442,6 +1358,7 @@
               <span>WhatsApp Us</span>
             </button>
           </div>
+          <p class="cta-footnote">No pushy sales calls • Just honest thoughts, good coffee &amp; great craft</p>
         </div>
       </div>
     </section>
@@ -1544,28 +1461,22 @@
               <div class="form-group">
                 <label for="contactService" class="form-label">What do you need?</label>
                 <select id="contactService" class="form-select">
-                  <option value="New Website">New Website</option>
-                  <option value="Website Redesign">Website Redesign</option>
-                  <option value="Landing Page">Landing Page</option>
-                  <option value="Booking System">Booking System</option>
-                  <option value="Digital Menu">Digital Menu</option>
-                  <option value="Online Forms">Online Forms</option>
+                  <option value="Websites">Websites</option>
+                  <option value="Landing Pages">Landing Pages</option>
+                  <option value="Online Booking">Online Booking</option>
+                  <option value="Business Automation">Business Automation</option>
+                  <option value="Custom Web Solutions">Custom Web Solutions</option>
                   <option value="WhatsApp Integration">WhatsApp Integration</option>
+                  <option value="Digital Menus & QR">Digital Menus & QR</option>
+                  <option value="UI/UX Design">UI/UX Design</option>
+                  <option value="Website Redesign">Website Redesign</option>
+                  <option value="Speed & Performance">Speed & Performance</option>
+                  <option value="SEO & Visibility">SEO & Visibility</option>
+                  <option value="Maintenance & Support">Maintenance & Support</option>
                   <option value="Other">Other</option>
                 </select>
               </div>
 
-              <!-- Budget Range Dropdown -->
-              <div class="form-group full-width">
-                <label for="contactBudget" class="form-label">Estimated Budget Range</label>
-                <select id="contactBudget" class="form-select">
-                  <option value="Under ₹10,000">Under ₹10,000</option>
-                  <option value="₹10,000 – ₹25,000" selected>₹10,000 – ₹25,000</option>
-                  <option value="₹25,000 – ₹50,000">₹25,000 – ₹50,000</option>
-                  <option value="₹50,000+">₹50,000+</option>
-                  <option value="Not sure yet">Not sure yet</option>
-                </select>
-              </div>
 
               <!-- Message Details -->
               <div class="form-group full-width">
@@ -1667,8 +1578,11 @@
 
 
 
+  <!-- Services Data & Dynamic JS Page Engine -->
+  <script src="js/services-data.js?v=2.2"></script>
+  <script src="js/services-page.js?v=2.2"></script>
   <!-- Main JavaScript Engine -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=2.3"></script>
 </body>
 
 </html>

@@ -64,7 +64,7 @@ export default async function handler(req, res) {
     phone,
     businessType = 'Other',
     service = 'General Enquiry',
-    budget = 'Not sure yet',
+    budget = '',
     message = ''
   } = body;
 
@@ -169,10 +169,11 @@ export default async function handler(req, res) {
                     <div style="font-size: 12px; font-weight: 700; color: #7C5320; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">Service Requested</div>
                     <div style="font-size: 17px; font-weight: 700; color: #16120E;">${safeService}</div>
                   </td>
+                  ${cleanBudget ? `
                   <td align="right">
                     <div style="font-size: 12px; font-weight: 700; color: #7C5320; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">Budget Range</div>
                     <div style="font-size: 16px; font-weight: 700; color: #B8823A;">${safeBudget}</div>
-                  </td>
+                  </td>` : ''}
                 </tr>
               </table>
             </td>
@@ -280,10 +281,11 @@ export default async function handler(req, res) {
                     <td width="35%" style="color: #786657; font-weight: 600; padding: 6px 0;">Service:</td>
                     <td style="color: #16120E; font-weight: 700; padding: 6px 0;">${safeService}</td>
                   </tr>
+                  ${cleanBudget ? `
                   <tr>
                     <td style="color: #786657; font-weight: 600; padding: 6px 0;">Budget Range:</td>
                     <td style="color: #16120E; font-weight: 600; padding: 6px 0;">${safeBudget}</td>
-                  </tr>
+                  </tr>` : ''}
                   <tr>
                     <td style="color: #786657; font-weight: 600; padding: 6px 0;">Contact Phone:</td>
                     <td style="color: #16120E; padding: 6px 0;">${safePhone}</td>
@@ -330,7 +332,7 @@ export default async function handler(req, res) {
       from: fromEmail,
       to: [toAdminEmail],
       reply_to: cleanEmail,
-      subject: `[New Enquiry] ${cleanName} — ${cleanService} (${cleanBudget})`,
+      subject: `[New Enquiry] ${cleanName} — ${cleanService}${cleanBudget ? ` (${cleanBudget})` : ''}`,
       html: adminEmailHtml
     };
 
